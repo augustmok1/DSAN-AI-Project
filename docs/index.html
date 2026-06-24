@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Delete this blue box and replace it with 2–3 paragraphs explaining the real-world context of your topic. Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?</p>
 </div>
 </div>
-<p><em>Start typing your project introduction here…</em></p>
+<p><em>TESTING</em></p>
 <hr>
 </section>
 <section id="official-research-questions" class="level2" data-number="2">
@@ -317,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/augustmok1\.github\.io\/DSAN-AI-Project\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
