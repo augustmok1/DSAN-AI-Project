@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Tokens vs.&nbsp;Humans: AI Sentiment and the Demand for Data Jobs</title>
+<title>Data – Tokens vs.&nbsp;Humans: AI Sentiment and the Demand for Data Jobs</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -263,11 +263,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html"> 
+    <a class="nav-link active" href="./data.html" aria-current="page"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -282,7 +282,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-selection" id="toc-data-selection" class="nav-link active" data-scroll-target="#data-selection">Data Selection</a></li>
+  <li><a href="#data-acquisition" id="toc-data-acquisition" class="nav-link" data-scroll-target="#data-acquisition">Data Acquisition</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda">EDA</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -294,7 +303,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Data</h1>
+<p class="subtitle lead">Data selection, acquisition, and cleaning</p>
 </div>
 
 
@@ -311,9 +321,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<section id="data-selection" class="level2">
+<h2 class="anchored" data-anchor-id="data-selection">Data Selection</h2>
+<p>My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.</p>
+<p>The first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively, which narrows openings down to data-related jobs.</p>
+<p>The second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data &amp; Analytics and Tech sectors, respectively.</p>
+<p>I chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses.</p>
+</section>
+<section id="data-acquisition" class="level2">
+<h2 class="anchored" data-anchor-id="data-acquisition">Data Acquisition</h2>
+<p>Here is where you will talk about HOW you acquired your data. Detail any APIs used, any websites accessed, or any directories downloaded</p>
+</section>
+<section id="data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h2>
+<p>Here is where you will discuss how you cleaned, engineered, or otherwise adjusted any of the data from the Acquisition stage.</p>
+</section>
+<section id="eda" class="level2">
+<h2 class="anchored" data-anchor-id="eda">EDA</h2>
+<div style="margin-bottom: 100px;">
+
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/fig1_tech_sector_postings.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Tech and data sector job postings have declined steadily since their peak in 2022.</figcaption>
+</figure>
+</div>
+<div style="margin-bottom: 100px;">
+
+</div>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/fig2_ai_mention_share.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.</figcaption>
+</figure>
+</div>
+<div style="margin-bottom: 100px;">
+
+</div>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/fig3_data_vs_ai_indexed.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.</figcaption>
+</figure>
+</div>
+<div style="margin-bottom: 100px;">
+
+</div>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/fig4_jolts_openings.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4. Both total and professional and business services job openings remain well below their 2022 highs.</figcaption>
+</figure>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

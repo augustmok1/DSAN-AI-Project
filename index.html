@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – DSAN-AI-Project</title>
+<title>Introduction – Tokens vs.&nbsp;Humans: AI Sentiment and the Demand for Data Jobs</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -39,10 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7b253ebb8905670ca9e2290904c16179.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-15fcad9ab7c555966ae450348bd48772.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7b253ebb8905670ca9e2290904c16179.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,10 +76,172 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="custom.scss">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">DSAN-AI-Project</span>
+    <span class="navbar-title">Tokens vs.&nbsp;Humans: AI Sentiment and the Demand for Data Jobs</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -97,12 +263,17 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./data.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -110,21 +281,26 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#introduction-motivation" id="toc-introduction-motivation" class="nav-link active" data-scroll-target="#introduction-motivation"><span class="header-section-number">1</span> Introduction &amp; Motivation</a></li>
-  <li><a href="#official-research-questions" id="toc-official-research-questions" class="nav-link" data-scroll-target="#official-research-questions"><span class="header-section-number">2</span> Official Research Questions</a></li>
-  <li><a href="#initial-literature-review" id="toc-initial-literature-review" class="nav-link" data-scroll-target="#initial-literature-review"><span class="header-section-number">3</span> Initial Literature Review</a></li>
-  <li><a href="#data-source-orientation" id="toc-data-source-orientation" class="nav-link" data-scroll-target="#data-source-orientation"><span class="header-section-number">4</span> Data Source Orientation</a></li>
+  <li><a href="#scope-of-the-project" id="toc-scope-of-the-project" class="nav-link active" data-scroll-target="#scope-of-the-project"><span class="header-section-number">1</span> Scope of the Project</a></li>
+  <li><a href="#introduction-motivation" id="toc-introduction-motivation" class="nav-link" data-scroll-target="#introduction-motivation"><span class="header-section-number">2</span> Introduction &amp; Motivation</a></li>
+  <li><a href="#official-research-questions" id="toc-official-research-questions" class="nav-link" data-scroll-target="#official-research-questions"><span class="header-section-number">3</span> Official Research Questions</a></li>
+  <li><a href="#initial-literature-review" id="toc-initial-literature-review" class="nav-link" data-scroll-target="#initial-literature-review"><span class="header-section-number">4</span> Initial Literature Review</a></li>
+  <li><a href="#data-source-orientation" id="toc-data-source-orientation" class="nav-link" data-scroll-target="#data-source-orientation"><span class="header-section-number">5</span> Data Source Orientation</a></li>
   </ul>
 </nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -146,96 +322,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction-motivation" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="introduction-motivation"><span class="header-section-number">1</span> Introduction &amp; Motivation</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Lab Task 1: The “Why”
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Delete this blue box and replace it with 2–3 paragraphs explaining the real-world context of your topic. Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?</p>
-</div>
-</div>
-<p><em>TESTING</em></p>
+<section id="scope-of-the-project" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="scope-of-the-project"><span class="header-section-number">1</span> Scope of the Project</h2>
+<p>Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?</p>
+<p>“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.</p>
+<p>“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.</p>
+<p>The test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes.</p>
+</section>
+<section id="introduction-motivation" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="introduction-motivation"><span class="header-section-number">2</span> Introduction &amp; Motivation</h2>
+<p>The public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while hard labor data shows only a recent and contested decline concentrated among early-career workers since late 2022 (Cite Literature). My project tests if that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides.</p>
+<p>THe question matters because narratives have consequences. A story that runs ahead of reality can steer students out of a viable field and freeze entry-level hiring before the data actually justifies it. On the other hand, a story that lags means workers, educator and policymakers underreact to a genuine shift.</p>
+<p>Answering the question allows for those various groups to act on a measured signal rather than just speculation. If AI signals reliably lead changes in data-job demand, they serve as an early warning for a workforce in transition. If they do not, that itself shows theat the labor data already captures what the discourse claims to add.</p>
 <hr>
 </section>
-<section id="official-research-questions" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="official-research-questions"><span class="header-section-number">2</span> Official Research Questions</h2>
-<p>Your project must be guided by clear, measurable data science inquiries. Use the format below to define your scope.</p>
+<section id="official-research-questions" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="official-research-questions"><span class="header-section-number">3</span> Official Research Questions</h2>
 <ul>
-<li><strong>Primary Research Question (RQ1):</strong> <em>e.g., To what extent can historical local weather patterns predict weekend public transit delays in major urban centers?</em></li>
-<li><strong>Secondary Research Question (RQ2):</strong> <em>e.g., Does this predictive relationship hold true across different socio-economic neighborhoods within the city limits?</em></li>
+<li><p><strong>Primary Research Question:</strong> <em>Does AI sentiment carry predictive information about data-job demand beyond what the labor data alone provides?</em></p></li>
+<li><p><strong>Secondary Research Question:</strong> <em>Did the public release of ChatGPT mark a break in U.S. data-job demand, AI-jobs sentiment, or in both?</em></p></li>
 </ul>
 <hr>
 </section>
-<section id="initial-literature-review" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="initial-literature-review"><span class="header-section-number">3</span> Initial Literature Review</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Academic Scaffolding
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Find at least two academic papers, industry reports, or documentation sources relevant to your domain. Summarize their findings below and explain how your specific project builds upon or differs from their methodology.</p>
-</div>
-</div>
-<section id="prior-work-1-title-of-paperarticle-here" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="prior-work-1-title-of-paperarticle-here"><span class="header-section-number">3.1</span> Prior Work 1: [Title of Paper/Article Here]</h3>
+<section id="initial-literature-review" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="initial-literature-review"><span class="header-section-number">4</span> Initial Literature Review</h2>
+<section id="prior-work-1-canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="prior-work-1-canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence"><span class="header-section-number">4.1</span> Prior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence</h3>
 <ul>
-<li><strong>Source/Authors:</strong></li>
-<li><strong>Core Finding:</strong></li>
-<li><strong>How it informs our project:</strong></li>
+<li><strong>Source/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen</strong></li>
+<li><strong>Core Finding: </strong></li>
+<li><strong>How it informs our project: </strong></li>
 </ul>
 </section>
-<section id="prior-work-2-title-of-paperarticle-here" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="prior-work-2-title-of-paperarticle-here"><span class="header-section-number">3.2</span> Prior Work 2: [Title of Paper/Article Here]</h3>
+<section id="prior-work-2-how-ai-forecasts-ai-jobs-benchmarking-llm-predictions-of-labor-market-changes" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="prior-work-2-how-ai-forecasts-ai-jobs-benchmarking-llm-predictions-of-labor-market-changes"><span class="header-section-number">4.2</span> Prior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes</h3>
 <ul>
-<li><strong>Source/Authors:</strong></li>
-<li><strong>Core Finding:</strong></li>
-<li><strong>How it informs our project:</strong></li>
+<li><strong>Source/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)</strong></li>
+<li><strong>Core Finding: </strong></li>
+<li><strong>How it informs our project: </strong></li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="data-source-orientation" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="data-source-orientation"><span class="header-section-number">4</span> Data Source Orientation</h2>
-<p>Briefly document the raw data you intend to use to answer your research questions.</p>
+<section id="data-source-orientation" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="data-source-orientation"><span class="header-section-number">5</span> Data Source Orientation</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 19%">
-<col style="width: 23%">
-<col style="width: 28%">
-<col style="width: 28%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 30%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Data Asset Name</th>
-<th>Source Agency / URL</th>
+<th>Source Agency</th>
 <th>Format (.csv, API, SQL)</th>
 <th>Row/Column Count (Est.)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><em>Example Dataset</em></td>
-<td><em>City Data Portal</em></td>
-<td><em>.csv</em></td>
-<td><em>~50,000 x 12</em></td>
+<td>JOLTS Total Nonfarm Job Openings</td>
+<td>BLS JOLTS via FRED</td>
+<td>.csv (also API)</td>
+<td>~61 x 2</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>JOLTS Professional &amp; Business Services Openings</td>
+<td>BLS JOLTS via FRED</td>
+<td>.csv (also API)</td>
+<td>~61 x 2</td>
+</tr>
+<tr class="odd">
+<td>Indeed Sector Job-Postings Index (Data &amp; Analytics + tech)</td>
+<td>Indeed Hiring Lab</td>
+<td>.csv</td>
+<td>~9,300 x 8</td>
+</tr>
+<tr class="even">
+<td>Indeed National AI-Mention Tracker (share of postings)</td>
+<td>Indeed Hiring Lab</td>
+<td>.csv</td>
+<td>~2,700 x 6</td>
 </tr>
 </tbody>
 </table>
@@ -246,6 +415,19 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
