@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
-  },
-  {
     "objectID": "index.html#scope-of-the-project",
     "href": "index.html#scope-of-the-project",
     "title": "Introduction",
-    "section": "",
-    "text": "Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
+    "section": "1 Scope of the Project",
+    "text": "1 Scope of the Project\nDoes AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
   },
   {
     "objectID": "index.html#introduction-motivation",
