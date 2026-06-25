@@ -1,0 +1,20 @@
+---
+title: "Data"
+subtitle: "Data selection, acquisition, and cleaning"
+
+format:
+  html:
+    toc: true
+---
+
+## Data Selection
+
+Here is where you will talk about what data sources you selected, and why. How do they pertain to your research questions? Was this the best data available? 
+
+## Data Acquisition
+
+Here is where you will talk about HOW you acquired your data. Detail any APIs used, any websites accessed, or any directories downloaded
+
+## Data Cleaning
+
+Here is where you will discuss how you cleaned, engineered, or otherwise adjusted any of the data from the Acquisition stage. 

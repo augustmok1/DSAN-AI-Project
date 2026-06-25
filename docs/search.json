@@ -40,5 +40,33 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Data",
+    "section": "",
+    "text": "Here is where you will talk about what data sources you selected, and why. How do they pertain to your research questions? Was this the best data available?"
+  },
+  {
+    "objectID": "data.html#data-selection",
+    "href": "data.html#data-selection",
+    "title": "Data",
+    "section": "",
+    "text": "Here is where you will talk about what data sources you selected, and why. How do they pertain to your research questions? Was this the best data available?"
+  },
+  {
+    "objectID": "data.html#data-acquisition",
+    "href": "data.html#data-acquisition",
+    "title": "Data",
+    "section": "Data Acquisition",
+    "text": "Data Acquisition\nHere is where you will talk about HOW you acquired your data. Detail any APIs used, any websites accessed, or any directories downloaded"
+  },
+  {
+    "objectID": "data.html#data-cleaning",
+    "href": "data.html#data-cleaning",
+    "title": "Data",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\nHere is where you will discuss how you cleaned, engineered, or otherwise adjusted any of the data from the Acquisition stage."
   }
 ]
