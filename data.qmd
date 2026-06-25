@@ -48,6 +48,6 @@ Here is where you will discuss how you cleaned, engineered, or otherwise adjuste
 <div style="margin-bottom: 100px;" ></div>
 ---
 
-![Figure 4. Both total and professional and business services job openings remain well below their 2022 highs.](data/fig4_jolts_openings.png)
+![Figure 4. Both total and professional and business services job openings remain well below their 2022 highs.](data/fig4_jolts_openings_indexed.png)
 
 
