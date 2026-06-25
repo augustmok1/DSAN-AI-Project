@@ -11,48 +11,39 @@ format:
 
 ## Introduction & Motivation
 
-::: {.callout-note}
-### Lab Task 1: The "Why"
-Delete this blue box and replace it with 2–3 paragraphs explaining the real-world context of your topic. Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?
-:::
-
-*TESTING*
+ **Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?**
 
 ---
 
 ## Official Research Questions
 
-Your project must be guided by clear, measurable data science inquiries. Use the format below to define your scope.
+* **Primary Research Question (RQ1):** *Does AI sentiment carry predictive information about data-job demand beyond what the labor data alone provides?*
 
-* **Primary Research Question (RQ1):** *e.g., To what extent can historical local weather patterns predict weekend public transit delays in major urban centers?*
-* **Secondary Research Question (RQ2):** *e.g., Does this predictive relationship hold true across different socio-economic neighborhoods within the city limits?*
+* **Secondary Research Question (RQ2):** *Did the public release of ChatGPT mark a break in U.S. data-job demand, AI-jobs sentiment, or in both?*
 
 ---
 
 ## Initial Literature Review
 
-::: {.callout-tip}
-### Academic Scaffolding
-Find at least two academic papers, industry reports, or documentation sources relevant to your domain. Summarize their findings below and explain how your specific project builds upon or differs from their methodology.
-:::
+### Prior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence
+* **Source/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen** 
+* **Core Finding: ** 
+* **How it informs our project: ** 
 
-### Prior Work 1: [Title of Paper/Article Here]
-* **Source/Authors:** 
-* **Core Finding:** 
-* **How it informs our project:** 
-
-### Prior Work 2: [Title of Paper/Article Here]
-* **Source/Authors:** 
-* **Core Finding:** 
-* **How it informs our project:** 
+### Prior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes
+* **Source/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)** 
+* **Core Finding: ** 
+* **How it informs our project: ** 
 
 ---
 
 ## Data Source Orientation
 
 Briefly document the raw data you intend to use to answer your research questions.
+| Data Asset Name | Source Agency | Format (.csv, API, SQL) | Row/Column Count (Est.) |
+|-----------------|---------------|-------------------------|-------------------------|
+| JOLTS Total Nonfarm Job Openings | BLS JOLTS via FRED | .csv (also API) | ~61 x 2 |
+| JOLTS Professional & Business Services Openings | BLS JOLTS via FRED | .csv (also API) | ~61 x 2 |
+| Indeed Sector Job-Postings Index (Data & Analytics + tech) | Indeed Hiring Lab | .csv (CC BY 4.0) | ~9,300 x 8 |
+| Indeed National AI-Mention Tracker (MoM change) | Indeed Hiring Lab | .csv (CC BY 4.0) | ~2,700 x 6 |
 
-| Data Asset Name  | Source Agency / URL | Format (.csv, API, SQL) | Row/Column Count (Est.) |
-|----------------- |---------------------|-------------------------|-------------------------|
-| *Example Dataset*| *City Data Portal*  | *.csv*                  | *~50,000 x 12*          |
-|                  |                     |                         |                         |

@@ -4,35 +4,35 @@
     "href": "index.html",
     "title": "Introduction",
     "section": "",
-    "text": "NoteLab Task 1: The “Why”\n\n\n\nDelete this blue box and replace it with 2–3 paragraphs explaining the real-world context of your topic. Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?\n\n\nTESTING"
+    "text": "Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?"
   },
   {
     "objectID": "index.html#introduction-motivation",
     "href": "index.html#introduction-motivation",
     "title": "Introduction",
     "section": "",
-    "text": "NoteLab Task 1: The “Why”\n\n\n\nDelete this blue box and replace it with 2–3 paragraphs explaining the real-world context of your topic. Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?\n\n\nTESTING"
+    "text": "Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?"
   },
   {
     "objectID": "index.html#official-research-questions",
     "href": "index.html#official-research-questions",
     "title": "Introduction",
     "section": "2 Official Research Questions",
-    "text": "2 Official Research Questions\nYour project must be guided by clear, measurable data science inquiries. Use the format below to define your scope.\n\nPrimary Research Question (RQ1): e.g., To what extent can historical local weather patterns predict weekend public transit delays in major urban centers?\nSecondary Research Question (RQ2): e.g., Does this predictive relationship hold true across different socio-economic neighborhoods within the city limits?"
+    "text": "2 Official Research Questions\n\nPrimary Research Question (RQ1): Does AI sentiment carry predictive information about data-job demand beyond what the labor data alone provides?\nSecondary Research Question (RQ2): Did the public release of ChatGPT mark a break in U.S. data-job demand, AI-jobs sentiment, or in both?"
   },
   {
     "objectID": "index.html#initial-literature-review",
     "href": "index.html#initial-literature-review",
     "title": "Introduction",
     "section": "3 Initial Literature Review",
-    "text": "3 Initial Literature Review\n\n\n\n\n\n\nTipAcademic Scaffolding\n\n\n\nFind at least two academic papers, industry reports, or documentation sources relevant to your domain. Summarize their findings below and explain how your specific project builds upon or differs from their methodology.\n\n\n\n3.1 Prior Work 1: [Title of Paper/Article Here]\n\nSource/Authors:\nCore Finding:\nHow it informs our project:\n\n\n\n3.2 Prior Work 2: [Title of Paper/Article Here]\n\nSource/Authors:\nCore Finding:\nHow it informs our project:"
+    "text": "3 Initial Literature Review\n\n3.1 Prior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence\n\nSource/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen\nCore Finding: \nHow it informs our project: \n\n\n\n3.2 Prior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes\n\nSource/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)\nCore Finding: \nHow it informs our project:"
   },
   {
     "objectID": "index.html#data-source-orientation",
     "href": "index.html#data-source-orientation",
     "title": "Introduction",
     "section": "4 Data Source Orientation",
-    "text": "4 Data Source Orientation\nBriefly document the raw data you intend to use to answer your research questions.\n\n\n\n\n\n\n\n\n\nData Asset Name\nSource Agency / URL\nFormat (.csv, API, SQL)\nRow/Column Count (Est.)\n\n\n\n\nExample Dataset\nCity Data Portal\n.csv\n~50,000 x 12"
+    "text": "4 Data Source Orientation\nBriefly document the raw data you intend to use to answer your research questions. | Data Asset Name | Source Agency | Format (.csv, API, SQL) | Row/Column Count (Est.) | |—————–|—————|————————-|————————-| | JOLTS Total Nonfarm Job Openings | BLS JOLTS via FRED | .csv (also API) | ~61 x 2 | | JOLTS Professional & Business Services Openings | BLS JOLTS via FRED | .csv (also API) | ~61 x 2 | | Indeed Sector Job-Postings Index (Data & Analytics + tech) | Indeed Hiring Lab | .csv (CC BY 4.0) | ~9,300 x 8 | | Indeed National AI-Mention Tracker (MoM change) | Indeed Hiring Lab | .csv (CC BY 4.0) | ~2,700 x 6 |"
   },
   {
     "objectID": "about.html",
