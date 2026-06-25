@@ -40,6 +40,7 @@ format:
 ## Data Source Orientation
 
 Briefly document the raw data you intend to use to answer your research questions.
+
 | Data Asset Name | Source Agency | Format (.csv, API, SQL) | Row/Column Count (Est.) |
 |-----------------|---------------|-------------------------|-------------------------|
 | JOLTS Total Nonfarm Job Openings | BLS JOLTS via FRED | .csv (also API) | ~61 x 2 |

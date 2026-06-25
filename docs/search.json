@@ -32,7 +32,7 @@
     "href": "index.html#data-source-orientation",
     "title": "Introduction",
     "section": "4 Data Source Orientation",
-    "text": "4 Data Source Orientation\nBriefly document the raw data you intend to use to answer your research questions. | Data Asset Name | Source Agency | Format (.csv, API, SQL) | Row/Column Count (Est.) | |—————–|—————|————————-|————————-| | JOLTS Total Nonfarm Job Openings | BLS JOLTS via FRED | .csv (also API) | ~61 x 2 | | JOLTS Professional & Business Services Openings | BLS JOLTS via FRED | .csv (also API) | ~61 x 2 | | Indeed Sector Job-Postings Index (Data & Analytics + tech) | Indeed Hiring Lab | .csv (CC BY 4.0) | ~9,300 x 8 | | Indeed National AI-Mention Tracker (MoM change) | Indeed Hiring Lab | .csv (CC BY 4.0) | ~2,700 x 6 |"
+    "text": "4 Data Source Orientation\nBriefly document the raw data you intend to use to answer your research questions.\n\n\n\n\n\n\n\n\n\nData Asset Name\nSource Agency\nFormat (.csv, API, SQL)\nRow/Column Count (Est.)\n\n\n\n\nJOLTS Total Nonfarm Job Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nJOLTS Professional & Business Services Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nIndeed Sector Job-Postings Index (Data & Analytics + tech)\nIndeed Hiring Lab\n.csv (CC BY 4.0)\n~9,300 x 8\n\n\nIndeed National AI-Mention Tracker (MoM change)\nIndeed Hiring Lab\n.csv (CC BY 4.0)\n~2,700 x 6"
   },
   {
     "objectID": "about.html",
