@@ -8,6 +8,9 @@ format:
     toc-depth: 2
     number-sections: true
 ---
+
+![](AIPhoto.png){fig-align="center" width="80%"}
+
 ## Scope of the Project
 
 Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?
