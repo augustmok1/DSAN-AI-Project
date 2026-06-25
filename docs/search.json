@@ -7,6 +7,13 @@
     "text": "Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
   },
   {
+    "objectID": "index.html#scope-of-the-project",
+    "href": "index.html#scope-of-the-project",
+    "title": "Introduction",
+    "section": "",
+    "text": "Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
+  },
+  {
     "objectID": "index.html#introduction-motivation",
     "href": "index.html#introduction-motivation",
     "title": "Introduction",
@@ -70,52 +77,10 @@
     "text": "Data Cleaning\nHere is where you will discuss how you cleaned, engineered, or otherwise adjusted any of the data from the Acquisition stage."
   },
   {
-    "objectID": "index.html#the-public-conversation-about-ai-replacing-data-workers-is-running-well-ahead-of-the-evidence-headlines-describe-data-jobs-being-automated-away-while-the-hard-labor-data-shows-only-a-recent-contested-decline-concentrated-among-early-career-workers-since-late-2022.-my-project-tests-whether-that-talk-holds-valuable-information-asking-whether-ai-related-sentiment-can-predict-u.s.-data-job-demand-beyond-what-the-labor-history-already-provides.",
-    "href": "index.html#the-public-conversation-about-ai-replacing-data-workers-is-running-well-ahead-of-the-evidence-headlines-describe-data-jobs-being-automated-away-while-the-hard-labor-data-shows-only-a-recent-contested-decline-concentrated-among-early-career-workers-since-late-2022.-my-project-tests-whether-that-talk-holds-valuable-information-asking-whether-ai-related-sentiment-can-predict-u.s.-data-job-demand-beyond-what-the-labor-history-already-provides.",
-    "title": "Introduction",
-    "section": "2 The public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while the hard labor data shows only a recent, contested decline concentrated among early-career workers since late 2022. My project tests whether that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides.",
-    "text": "2 The public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while the hard labor data shows only a recent, contested decline concentrated among early-career workers since late 2022. My project tests whether that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides."
-  },
-  {
-    "objectID": "index.html#scope-of-the-project",
-    "href": "index.html#scope-of-the-project",
-    "title": "Introduction",
-    "section": "",
-    "text": "Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
-  },
-  {
     "objectID": "data.html#eda",
     "href": "data.html#eda",
     "title": "Data",
     "section": "EDA",
     "text": "EDA\n\n\n\n\n\n\nFigure 1. Tech and data sector job postings have declined steadily since their peak in 2022.\n\n\n\n\n\n\n\n\n\nFigure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.\n\n\n\n\n\n\n\n\n\nFigure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.\n\n\n\n\n\n\n\n\n\nFigure 4. Both total and professional and business services job openings remain well below their 2022 highs."
-  },
-  {
-    "objectID": "data.html#tech-and-data-sector-job-postings-have-declined-steadily-since-their-peak-in-2022.",
-    "href": "data.html#tech-and-data-sector-job-postings-have-declined-steadily-since-their-peak-in-2022.",
-    "title": "Data",
-    "section": "Tech and data sector job postings have declined steadily since their peak in 2022.",
-    "text": "Tech and data sector job postings have declined steadily since their peak in 2022."
-  },
-  {
-    "objectID": "data.html#ai-mentions-in-u.s.-job-postings-have-more-than-doubled-since-the-release-of-chatgpt.",
-    "href": "data.html#ai-mentions-in-u.s.-job-postings-have-more-than-doubled-since-the-release-of-chatgpt.",
-    "title": "Data",
-    "section": "AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.",
-    "text": "AI mentions in U.S. job postings have more than doubled since the release of ChatGPT."
-  },
-  {
-    "objectID": "data.html#rising-ai-demand-and-falling-data-job-postings-have-diverged-sharply-since-2023.",
-    "href": "data.html#rising-ai-demand-and-falling-data-job-postings-have-diverged-sharply-since-2023.",
-    "title": "Data",
-    "section": "Rising AI demand and falling data-job postings have diverged sharply since 2023.",
-    "text": "Rising AI demand and falling data-job postings have diverged sharply since 2023.\n\nBoth total and professional and business services job openings remain well below their 2022 highs."
-  },
-  {
-    "objectID": "data.html#dsdsdsd",
-    "href": "data.html#dsdsdsd",
-    "title": "Data",
-    "section": "dsdsdsd",
-    "text": "dsdsdsd\n\n\n\nFigure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.\n\n\n\n\n\n\nFigure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.\n\n\n\n\n\n\nFigure 4. Both total and professional and business services job openings remain well below their 2022 highs."
   }
 ]
