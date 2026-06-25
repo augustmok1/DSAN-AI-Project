@@ -9,7 +9,13 @@ format:
 
 ## Data Selection
 
-Here is where you will talk about what data sources you selected, and why. How do they pertain to your research questions? Was this the best data available? 
+My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.
+
+The first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively, which narrows openings down to data-related jobs.
+
+The second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.
+
+I chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses.
 
 ## Data Acquisition
 
@@ -18,3 +24,30 @@ Here is where you will talk about HOW you acquired your data. Detail any APIs us
 ## Data Cleaning
 
 Here is where you will discuss how you cleaned, engineered, or otherwise adjusted any of the data from the Acquisition stage. 
+
+## EDA
+
+<div style="margin-bottom: 100px;" ></div>
+
+
+![Figure 1. Tech and data sector job postings have declined steadily since their peak in 2022.](data/fig1_tech_sector_postings.png)
+
+
+<div style="margin-bottom: 100px;" ></div>
+---
+
+![Figure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.](data/fig2_ai_mention_share.png)
+
+
+<div style="margin-bottom: 100px;" ></div>
+---
+
+![Figure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.](data/fig3_data_vs_ai_indexed.png)
+
+
+<div style="margin-bottom: 100px;" ></div>
+---
+
+![Figure 4. Both total and professional and business services job openings remain well below their 2022 highs.](data/fig4_jolts_openings.png)
+
+

@@ -4,35 +4,35 @@
     "href": "index.html",
     "title": "Introduction",
     "section": "",
-    "text": "Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?"
+    "text": "Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
   },
   {
     "objectID": "index.html#introduction-motivation",
     "href": "index.html#introduction-motivation",
     "title": "Introduction",
-    "section": "",
-    "text": "Why does this problem matter? Who is affected? What real-world impact does solving this problem achieve?"
+    "section": "2 Introduction & Motivation",
+    "text": "2 Introduction & Motivation\nThe public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while hard labor data shows only a recent and contested decline concentrated among early-career workers since late 2022 (Cite Literature). My project tests if that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides.\nTHe question matters because narratives have consequences. A story that runs ahead of reality can steer students out of a viable field and freeze entry-level hiring before the data actually justifies it. On the other hand, a story that lags means workers, educator and policymakers underreact to a genuine shift.\nAnswering the question allows for those various groups to act on a measured signal rather than just speculation. If AI signals reliably lead changes in data-job demand, they serve as an early warning for a workforce in transition. If they do not, that itself shows theat the labor data already captures what the discourse claims to add."
   },
   {
     "objectID": "index.html#official-research-questions",
     "href": "index.html#official-research-questions",
     "title": "Introduction",
-    "section": "2 Official Research Questions",
-    "text": "2 Official Research Questions\n\nPrimary Research Question (RQ1): Does AI sentiment carry predictive information about data-job demand beyond what the labor data alone provides?\nSecondary Research Question (RQ2): Did the public release of ChatGPT mark a break in U.S. data-job demand, AI-jobs sentiment, or in both?"
+    "section": "3 Official Research Questions",
+    "text": "3 Official Research Questions\n\nPrimary Research Question: Does AI sentiment carry predictive information about data-job demand beyond what the labor data alone provides?\nSecondary Research Question: Did the public release of ChatGPT mark a break in U.S. data-job demand, AI-jobs sentiment, or in both?"
   },
   {
     "objectID": "index.html#initial-literature-review",
     "href": "index.html#initial-literature-review",
     "title": "Introduction",
-    "section": "3 Initial Literature Review",
-    "text": "3 Initial Literature Review\n\n3.1 Prior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence\n\nSource/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen\nCore Finding: \nHow it informs our project: \n\n\n\n3.2 Prior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes\n\nSource/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)\nCore Finding: \nHow it informs our project:"
+    "section": "4 Initial Literature Review",
+    "text": "4 Initial Literature Review\n\n4.1 Prior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence\n\nSource/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen\nCore Finding: \nHow it informs our project: \n\n\n\n4.2 Prior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes\n\nSource/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)\nCore Finding: \nHow it informs our project:"
   },
   {
     "objectID": "index.html#data-source-orientation",
     "href": "index.html#data-source-orientation",
     "title": "Introduction",
-    "section": "4 Data Source Orientation",
-    "text": "4 Data Source Orientation\nBriefly document the raw data you intend to use to answer your research questions.\n\n\n\n\n\n\n\n\n\nData Asset Name\nSource Agency\nFormat (.csv, API, SQL)\nRow/Column Count (Est.)\n\n\n\n\nJOLTS Total Nonfarm Job Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nJOLTS Professional & Business Services Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nIndeed Sector Job-Postings Index (Data & Analytics + tech)\nIndeed Hiring Lab\n.csv (CC BY 4.0)\n~9,300 x 8\n\n\nIndeed National AI-Mention Tracker (MoM change)\nIndeed Hiring Lab\n.csv (CC BY 4.0)\n~2,700 x 6"
+    "section": "5 Data Source Orientation",
+    "text": "5 Data Source Orientation\n\n\n\n\n\n\n\n\n\nData Asset Name\nSource Agency\nFormat (.csv, API, SQL)\nRow/Column Count (Est.)\n\n\n\n\nJOLTS Total Nonfarm Job Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nJOLTS Professional & Business Services Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nIndeed Sector Job-Postings Index (Data & Analytics + tech)\nIndeed Hiring Lab\n.csv\n~9,300 x 8\n\n\nIndeed National AI-Mention Tracker (share of postings)\nIndeed Hiring Lab\n.csv\n~2,700 x 6"
   },
   {
     "objectID": "about.html",
@@ -46,14 +46,14 @@
     "href": "data.html",
     "title": "Data",
     "section": "",
-    "text": "Here is where you will talk about what data sources you selected, and why. How do they pertain to your research questions? Was this the best data available?"
+    "text": "My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.\nThe first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively, which narrows openings down to data-related jobs.\nThe second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.\nI chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses."
   },
   {
     "objectID": "data.html#data-selection",
     "href": "data.html#data-selection",
     "title": "Data",
     "section": "",
-    "text": "Here is where you will talk about what data sources you selected, and why. How do they pertain to your research questions? Was this the best data available?"
+    "text": "My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.\nThe first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively, which narrows openings down to data-related jobs.\nThe second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.\nI chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses."
   },
   {
     "objectID": "data.html#data-acquisition",
@@ -68,5 +68,54 @@
     "title": "Data",
     "section": "Data Cleaning",
     "text": "Data Cleaning\nHere is where you will discuss how you cleaned, engineered, or otherwise adjusted any of the data from the Acquisition stage."
+  },
+  {
+    "objectID": "index.html#the-public-conversation-about-ai-replacing-data-workers-is-running-well-ahead-of-the-evidence-headlines-describe-data-jobs-being-automated-away-while-the-hard-labor-data-shows-only-a-recent-contested-decline-concentrated-among-early-career-workers-since-late-2022.-my-project-tests-whether-that-talk-holds-valuable-information-asking-whether-ai-related-sentiment-can-predict-u.s.-data-job-demand-beyond-what-the-labor-history-already-provides.",
+    "href": "index.html#the-public-conversation-about-ai-replacing-data-workers-is-running-well-ahead-of-the-evidence-headlines-describe-data-jobs-being-automated-away-while-the-hard-labor-data-shows-only-a-recent-contested-decline-concentrated-among-early-career-workers-since-late-2022.-my-project-tests-whether-that-talk-holds-valuable-information-asking-whether-ai-related-sentiment-can-predict-u.s.-data-job-demand-beyond-what-the-labor-history-already-provides.",
+    "title": "Introduction",
+    "section": "2 The public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while the hard labor data shows only a recent, contested decline concentrated among early-career workers since late 2022. My project tests whether that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides.",
+    "text": "2 The public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while the hard labor data shows only a recent, contested decline concentrated among early-career workers since late 2022. My project tests whether that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides."
+  },
+  {
+    "objectID": "index.html#scope-of-the-project",
+    "href": "index.html#scope-of-the-project",
+    "title": "Introduction",
+    "section": "",
+    "text": "Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
+  },
+  {
+    "objectID": "data.html#eda",
+    "href": "data.html#eda",
+    "title": "Data",
+    "section": "EDA",
+    "text": "EDA\n\n\n\n\n\n\nFigure 1. Tech and data sector job postings have declined steadily since their peak in 2022.\n\n\n\n\n\n\n\n\n\nFigure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.\n\n\n\n\n\n\n\n\n\nFigure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.\n\n\n\n\n\n\n\n\n\nFigure 4. Both total and professional and business services job openings remain well below their 2022 highs."
+  },
+  {
+    "objectID": "data.html#tech-and-data-sector-job-postings-have-declined-steadily-since-their-peak-in-2022.",
+    "href": "data.html#tech-and-data-sector-job-postings-have-declined-steadily-since-their-peak-in-2022.",
+    "title": "Data",
+    "section": "Tech and data sector job postings have declined steadily since their peak in 2022.",
+    "text": "Tech and data sector job postings have declined steadily since their peak in 2022."
+  },
+  {
+    "objectID": "data.html#ai-mentions-in-u.s.-job-postings-have-more-than-doubled-since-the-release-of-chatgpt.",
+    "href": "data.html#ai-mentions-in-u.s.-job-postings-have-more-than-doubled-since-the-release-of-chatgpt.",
+    "title": "Data",
+    "section": "AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.",
+    "text": "AI mentions in U.S. job postings have more than doubled since the release of ChatGPT."
+  },
+  {
+    "objectID": "data.html#rising-ai-demand-and-falling-data-job-postings-have-diverged-sharply-since-2023.",
+    "href": "data.html#rising-ai-demand-and-falling-data-job-postings-have-diverged-sharply-since-2023.",
+    "title": "Data",
+    "section": "Rising AI demand and falling data-job postings have diverged sharply since 2023.",
+    "text": "Rising AI demand and falling data-job postings have diverged sharply since 2023.\n\nBoth total and professional and business services job openings remain well below their 2022 highs."
+  },
+  {
+    "objectID": "data.html#dsdsdsd",
+    "href": "data.html#dsdsdsd",
+    "title": "Data",
+    "section": "dsdsdsd",
+    "text": "dsdsdsd\n\n\n\nFigure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.\n\n\n\n\n\n\nFigure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.\n\n\n\n\n\n\nFigure 4. Both total and professional and business services job openings remain well below their 2022 highs."
   }
 ]
