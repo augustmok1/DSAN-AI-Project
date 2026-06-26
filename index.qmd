@@ -26,7 +26,7 @@ The public conversation about AI replacing data workers is running well ahead of
 
 The question matters because narratives have consequences. A story that runs ahead of reality can steer students out of a viable field and freeze entry-level hiring before the data actually justifies it. On the other hand, a story that lags means workers, educator and policymakers underreact to a genuine shift.
 
-Answering the question allows for those various groups to act on a measured signal rather than just speculation. If AI signals reliably lead changes in data-job demand, they serve as an early warning for a workforce in transition. If they do not, that itself shows theat the labor data already captures what the discourse claims to add.
+Answering the question allows for those various groups to act on a measured signal rather than just speculation. If AI signals reliably lead changes in data-job demand, they serve as an early warning for a workforce in transition. If they do not, that itself shows that the labor data already captures what the discourse claims to add.
 
 ---
 
@@ -41,14 +41,14 @@ Answering the question allows for those various groups to act on a measured sign
 ## Initial Literature Review
 
 ### Prior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence
-* **Source/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen** 
-* **Core Finding: Using high-frequency payroll data, the authors found that early-career workers aged 22 to 25 in the most AI-exposed occupations saw a 16% relative decline in employment (up 3% from the previous year), while older workers held steady. The authors found that the employment decline was concentrated in roles where Artificial Intelligence automates rather than augments their work. Around the time of the public release of ChatGPT was where these employment patterns appeared to start.** 
-* **How it informs the project: This work contextualizes and grounds the labor-outcome side of my question. It also serves the central tension of my research: that the displacement signal is real. I plan to test whether the surrounding AI signals lead or coincide with the observed employment decline** 
+* **Source/Authors:** Erik Brynjolfsson, Bharat Chandar and Ruyu Chen 
+* **Core Finding:** Using high-frequency payroll data, the authors found that early-career workers aged 22 to 25 in the most AI-exposed occupations saw a 16% relative decline in employment (up 3% from the previous year), while older workers held steady. The authors found that the employment decline was concentrated in roles where Artificial Intelligence automates rather than augments their work. Around the time of the public release of ChatGPT was where these employment patterns appeared to start.
+* **How it informs the project:** This work contextualizes and grounds the labor-outcome side of my question. It also serves the central tension of my research: that the displacement signal is real. I plan to test whether the surrounding AI signals lead or coincide with the observed employment decline
 
 ### Prior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes
-* **Source/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)** 
-* **Core Finding: The authors of this paper built a benchmark for forecasting sector-level job demand from text and structured data. They used the same Indeed Hiring Lab postings index that I analyzed under strict controls. In their findings, they discovered that a simple moving-average baseline was hard to beat.** 
-* **How it informs the project: This paper is the closest existing work to my project goal and shaped my methodology directly. I plan to use time-ordered out-of-sample evaluation and to benchmark similarly to a naive baseline. What makes our projects different is that I plan on keeping my forecasting model classical and testing AI sentiment as an exogenous predictor rather than prompting an language model to forecast like they did.** 
+* **Source/Authors:** Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)
+* **Core Finding:** The authors of this paper built a benchmark for forecasting sector-level job demand from text and structured data. They used the same Indeed Hiring Lab postings index that I analyzed under strict controls. In their findings, they discovered that a simple moving-average baseline was hard to beat. 
+* **How it informs the project:** This paper is the closest existing work to my project goal and shaped my methodology directly. I plan to use time-ordered out-of-sample evaluation and to benchmark similarly to a naive baseline. What makes our projects different is that I plan on keeping my forecasting model classical and testing AI sentiment as an exogenous predictor rather than prompting an language model to forecast like they did.
 
 ---
 
