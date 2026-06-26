@@ -1,5 +1,5 @@
 ---
-Title: "Data"
+Title: Data
 subtitle: "Data Selection, Acquisition, Cleaning and EDA"
 
 format:
