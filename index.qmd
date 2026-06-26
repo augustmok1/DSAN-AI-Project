@@ -1,17 +1,15 @@
 ---
-title: "Introduction"
-subtitle: "Project Framing and Literature Review"
+title: "Tokens vs. Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S."
 
 format:
   html:
     toc: true
     toc-depth: 2
-    number-sections: true
 ---
 
 ![](AIPhoto.png){fig-align="center" width="80%"}
 
-## Scope of the Project
+## Project Scope
 
 Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?
 
@@ -26,7 +24,7 @@ The test: a forecast built only from labor history is compared against one that 
 
 The public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while hard labor data shows only a recent and contested decline concentrated among early-career workers since late 2022 (Cite Literature). My project tests if that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides. 
 
-THe question matters because narratives have consequences. A story that runs ahead of reality can steer students out of a viable field and freeze entry-level hiring before the data actually justifies it. On the other hand, a story that lags means workers, educator and policymakers underreact to a genuine shift.
+The question matters because narratives have consequences. A story that runs ahead of reality can steer students out of a viable field and freeze entry-level hiring before the data actually justifies it. On the other hand, a story that lags means workers, educator and policymakers underreact to a genuine shift.
 
 Answering the question allows for those various groups to act on a measured signal rather than just speculation. If AI signals reliably lead changes in data-job demand, they serve as an early warning for a workforce in transition. If they do not, that itself shows theat the labor data already captures what the discourse claims to add.
 

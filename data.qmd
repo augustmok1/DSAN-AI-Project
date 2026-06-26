@@ -1,17 +1,21 @@
 ---
-title: "Data"
-subtitle: "Data selection, acquisition, and cleaning"
+Title: "Data"
+subtitle: "Data Selection, Acquisition, Cleaning and EDA"
 
 format:
   html:
     toc: true
+
+execute:
+  warning: false
+  echo: false
 ---
 
 ## Data Selection
 
 My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.
 
-The first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively, which narrows openings down to data-related jobs.
+The first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively.
 
 The second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.
 
@@ -19,35 +23,246 @@ I chose these four datasets because they are publicly available, reliable and pr
 
 ## Data Acquisition
 
-Here is where you will talk about HOW you acquired your data. Detail any APIs used, any websites accessed, or any directories downloaded
+I acquired the two BLS JOLTS datasets from FRED (Federal Reserve Economic Data) as CSV files. Each file contains monthly observations dates and their related number of job openings in thousands dating back to 2020. I obtained the two Indeed Hiring Lab datasets as CSV files from their website as well.
 
 ## Data Cleaning
 
-Here is where you will discuss how you cleaned, engineered, or otherwise adjusted any of the data from the Acquisition stage. 
+Cleaning the data centered on bringing these four datasets of different shapes and frequencies onto a common monthly basis. The two JOLTS datasets where already monthly and needed only date parsing and selection of the openings column already in the file. The two Indeed datasets were daily, so I aggregated each to monthly by averaging the daily values within each month.
 
 ## EDA
 
-<div style="margin-bottom: 100px;" ></div>
+```{python}
+#| label: setup
+import pandas as pd
+import plotly.graph_objects as go
+
+CHATGPT = "2022-11-30"
+BLUE  = "#1447e6"
+RED   = "#d7263d"
+GREY  = "#9aa5b1"
+DATA_DIR = "data"
+```
 
 
-![Figure 1. Tech and data sector job postings have declined steadily since their peak in 2022.](data/fig1_tech_sector_postings.png)
+<div style= "margin-bottom:100px;"></div>
 
 
-<div style="margin-bottom: 100px;" ></div>
+```{python}
+#| label: fig1
+sector = pd.read_csv(f"{DATA_DIR}/IndeedSectorJobPostings.csv")
+sector['month'] = pd.to_datetime(sector['dateString']).dt.to_period('M').dt.to_timestamp()
+sector_monthly = (
+    sector.groupby(['month', 'sectorName'])['value']
+    .mean().reset_index(name='index')
+)
+
+color_map = {
+    "Data & Analytics":                        BLUE,
+    "Software Development":                    GREY,
+    "IT Systems & Solutions":                  "#7b8794",
+    "IT Infrastructure, Operations & Support": "#52606d",
+}
+
+fig1 = go.Figure()
+for name, grp in sector_monthly.groupby('sectorName'):
+    fig1.add_trace(go.Scatter(
+        x=grp['month'], y=grp['index'],
+        mode='lines', name=name,
+        line=dict(color=color_map.get(name, GREY), width=2)
+    ))
+
+fig1.add_hline(y=100, line_color="lightgrey", line_width=1)
+fig1.add_vline(x=CHATGPT, line_dash="dash", line_color="darkgrey")
+fig1.update_layout(
+    title="Tech and Data Sector Job Postings (2020–2024)",
+    yaxis_title="Posting index (100 = Feb 2020)",
+    legend=dict(orientation="h", yanchor="top", y=-0.08),
+    template="plotly_white",
+    margin=dict(b=110, t=50),
+    annotations=[dict(
+        text="Source: Indeed Hiring Lab.",
+        showarrow=False, xref="paper", yref="paper",
+        x=1, y=-0.2, xanchor="right", font=dict(size=10, color="grey")
+    )]
+)
+fig1.add_annotation(
+    x=CHATGPT, xref="x", yref="paper", y=1,
+    text="ChatGPT release", showarrow=False,
+    xanchor="left", yanchor="bottom",
+    font=dict(size=10, color="darkgrey")
+)
+fig1.show()
+```
+
+Figure 1. Tech and data sector job postings have declined steadily since their peak in 2022.
+
+<div style= "margin-bottom:100px;"></div>
+
 ---
 
-![Figure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.](data/fig2_ai_mention_share.png)
+<div style= "margin-bottom:100px;"></div>
 
+```{python}
+#| label: fig2
+ai = pd.read_csv(f"{DATA_DIR}/IndeedAIMentionTracker.csv")
+ai['month'] = pd.to_datetime(ai['dateString']).dt.to_period('M').dt.to_timestamp()
+ai_monthly = ai.groupby('month')['value'].mean().reset_index(name='ai_share')
 
-<div style="margin-bottom: 100px;" ></div>
+fig2 = go.Figure()
+fig2.add_trace(go.Scatter(
+    x=ai_monthly['month'], y=ai_monthly['ai_share'],
+    mode='lines',
+    fill='tozeroy',
+    fillcolor='rgba(215, 38, 61, 0.1)',
+    line=dict(color=RED, width=2),
+    name='AI-mention share'
+))
+fig2.add_vline(x=CHATGPT, line_dash="dash", line_color="darkgrey",
+               annotation_text="ChatGPT release", annotation_position="top right",
+               annotation_font=dict(size=10, color="darkgrey"))
+fig2.update_layout(
+    title="AI-Mention Share in U.S. Job Postings",
+    yaxis_title="Share of postings mentioning AI (%)",
+    xaxis=dict(
+        tickvals=['2020-01-01', '2021-01-01', '2022-01-01', '2023-01-01', '2024-01-01', '2025-01-01'],
+        ticktext=['2020', '2021', '2022', '2023', '2024', '2025']
+    ),
+    template="plotly_white",
+    showlegend=False,
+    margin=dict(b=70, t=50),
+    annotations=[dict(
+        text="Source: Indeed Hiring Lab.",
+        showarrow=False, xref="paper", yref="paper",
+        x=1, y=-0.10, xanchor="right", font=dict(size=10, color="grey")
+    )]
+)
+fig2.add_annotation(
+    x=CHATGPT, xref="x", yref="paper", y=1,
+    text="ChatGPT release", showarrow=False,
+    xanchor="left", yanchor="bottom",
+    font=dict(size=10, color="darkgrey")
+)
+fig2.show()
+```
+
+Figure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.
+
+<div style= "margin-bottom:100px;"></div>
+
 ---
 
-![Figure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.](data/fig3_data_vs_ai_indexed.png)
+<div style= "margin-bottom:100px;"></div>
 
+```{python}
+#| label: fig3
+da = sector_monthly[sector_monthly['sectorName'] == 'Data & Analytics'].copy()
+base_da = da.loc[da['month'] == pd.Timestamp('2020-02-01'), 'index'].values[0]
+da['value'] = da['index'] / base_da * 100
 
-<div style="margin-bottom: 100px;" ></div>
+ai_idx = ai_monthly[ai_monthly['month'] >= pd.Timestamp('2020-02-01')].copy()
+base_ai = ai_idx.loc[ai_idx['month'] == pd.Timestamp('2020-02-01'), 'ai_share'].values[0]
+ai_idx['value'] = ai_idx['ai_share'] / base_ai * 100
+
+fig3 = go.Figure()
+fig3.add_trace(go.Scatter(
+    x=da['month'], y=da['value'],
+    mode='lines', name='Data & Analytics postings',
+    line=dict(color=BLUE, width=2)
+))
+fig3.add_trace(go.Scatter(
+    x=ai_idx['month'], y=ai_idx['value'],
+    mode='lines', name='AI-mention share',
+    line=dict(color=RED, width=2)
+))
+fig3.add_hline(y=100, line_color="lightgrey", line_width=1)
+fig3.add_vline(x=CHATGPT, line_dash="dash", line_color="darkgrey",
+               annotation_text="ChatGPT release", annotation_position="top right",
+               annotation_font=dict(size=10, color="darkgrey"))
+fig3.update_layout(
+    title="Data & Analytics Postings vs. AI-Mention Share (Indexed)",
+    yaxis_title="Indexed to 100 at Feb 2020",
+    legend=dict(orientation="h", yanchor="top", y=-0.08),
+    template="plotly_white",
+    margin=dict(b=110, t=50),
+    annotations=[dict(
+        text="Source: Indeed Hiring Lab. Both series indexed to a common base for shape comparison.",
+        showarrow=False, xref="paper", yref="paper",
+        x=1, y=-0.20, xanchor="right", font=dict(size=10, color="grey")
+    )]
+)
+fig3.add_annotation(
+    x=CHATGPT, xref="x", yref="paper", y=1,
+    text="ChatGPT release", showarrow=False,
+    xanchor="left", yanchor="bottom",
+    font=dict(size=10, color="darkgrey")
+)
+fig3.show()
+```
+
+Figure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.
+
+<div style= "margin-bottom:100px;"></div>
+
 ---
 
-![Figure 4. Both total and professional and business services job openings remain well below their 2022 highs.](data/fig4_jolts_openings_indexed.png)
+<div style= "margin-bottom:100px;"></div>
 
+```{python}
+#| label: fig4
+total = pd.read_csv(f"{DATA_DIR}/TotalNonfarmJobOpenings.csv")
+total = total.rename(columns={'observation_date': 'date', 'JTSJOL': 'openings'})
+total['date'] = pd.to_datetime(total['date'])
+total['series'] = 'Total nonfarm'
 
+pbs = pd.read_csv(f"{DATA_DIR}/ProfessionalAndBusinessJobOpenings.csv")
+pbs = pbs.rename(columns={'observation_date': 'date', 'JTS540099JOL': 'openings'})
+pbs['date'] = pd.to_datetime(pbs['date'])
+pbs['series'] = 'Professional & Business Services'
+
+jolts = pd.concat([total, pbs])
+
+def index_to_base(df):
+    base = df.loc[df['date'] == pd.Timestamp('2021-04-01'), 'openings'].values[0]
+    df = df.copy()
+    df['index'] = df['openings'] / base * 100
+    return df
+
+jolts = jolts.groupby('series', group_keys=False).apply(index_to_base)
+
+color_map4 = {
+    'Total nonfarm':                    GREY,
+    'Professional & Business Services': BLUE,
+}
+
+fig4 = go.Figure()
+for name, grp in jolts.groupby('series'):
+    fig4.add_trace(go.Scatter(
+        x=grp['date'], y=grp['index'],
+        mode='lines', name=name,
+        line=dict(color=color_map4[name], width=2)
+    ))
+
+fig4.add_hline(y=100, line_color="lightgrey", line_width=1)
+fig4.add_vline(x=CHATGPT, line_dash="dash", line_color="darkgrey")
+fig4.update_layout(
+    title="JOLTS Job Openings: Total and Professional & Business Services",
+    yaxis_title="Openings index (100 = Apr 2021)",
+    legend=dict(orientation="h", yanchor="top", y=-0.08),
+    template="plotly_white",
+    margin=dict(b=110, t=50),
+    annotations=[dict(
+        text="Source: BLS JOLTS via FRED.",
+        showarrow=False, xref="paper", yref="paper",
+        x=1, y=-0.10, xanchor="right", font=dict(size=10, color="grey")
+    )]
+)
+fig4.add_annotation(
+    x=CHATGPT, xref="x", yref="paper", y=1,
+    text="ChatGPT release", showarrow=False,
+    xanchor="left", yanchor="bottom",
+    font=dict(size=10, color="darkgrey")
+)
+fig4.show()
+```
+
+Figure 4. Both total and professional and business services job openings remain well below their 2022 highs.
