@@ -31,6 +31,7 @@ Cleaning the data centered on bringing these four datasets of different shapes a
 
 ## EDA
 
+
 ```{python}
 #| label: setup
 import pandas as pd
@@ -46,59 +47,7 @@ DATA_DIR = "data"
 
 <div style= "margin-bottom:100px;"></div>
 
-
-```{python}
-#| label: fig1
-sector = pd.read_csv(f"{DATA_DIR}/IndeedSectorJobPostings.csv")
-sector['month'] = pd.to_datetime(sector['dateString']).dt.to_period('M').dt.to_timestamp()
-sector_monthly = (
-    sector.groupby(['month', 'sectorName'])['value']
-    .mean().reset_index(name='index')
-)
-
-color_map = {
-    "Data & Analytics":                        BLUE,
-    "Software Development":                    GREY,
-    "IT Systems & Solutions":                  "#7b8794",
-    "IT Infrastructure, Operations & Support": "#52606d",
-}
-
-fig1 = go.Figure()
-for name, grp in sector_monthly.groupby('sectorName'):
-    fig1.add_trace(go.Scatter(
-        x=grp['month'], y=grp['index'],
-        mode='lines', name=name,
-        line=dict(color=color_map.get(name, GREY), width=2)
-    ))
-
-fig1.add_hline(y=100, line_color="lightgrey", line_width=1)
-fig1.add_vline(x=CHATGPT, line_dash="dash", line_color="darkgrey")
-fig1.update_layout(
-    title="Tech and Data Sector Job Postings (2020–2024)",
-    yaxis_title="Posting index (100 = Feb 2020)",
-    legend=dict(orientation="h", yanchor="top", y=-0.08),
-    template="plotly_white",
-    margin=dict(b=110, t=50),
-    annotations=[dict(
-        text="Source: Indeed Hiring Lab.",
-        showarrow=False, xref="paper", yref="paper",
-        x=1, y=-0.2, xanchor="right", font=dict(size=10, color="grey")
-    )]
-)
-fig1.add_annotation(
-    x=CHATGPT, xref="x", yref="paper", y=1,
-    text="ChatGPT release", showarrow=False,
-    xanchor="left", yanchor="bottom",
-    font=dict(size=10, color="darkgrey")
-)
-fig1.show()
-```
-
-Figure 1. Tech and data sector job postings have declined steadily since their peak in 2022.
-
-<div style= "margin-bottom:100px;"></div>
-
----
+<span style="font-size: 150%;">***Employer demand for AI skills has surged continuously since ChatGPT's release***</span>
 
 <div style= "margin-bottom:100px;"></div>
 
@@ -127,7 +76,7 @@ fig2.update_layout(
         tickvals=['2020-01-01', '2021-01-01', '2022-01-01', '2023-01-01', '2024-01-01', '2025-01-01'],
         ticktext=['2020', '2021', '2022', '2023', '2024', '2025']
     ),
-    template="plotly_white",
+    template="plotly_dark",
     showlegend=False,
     margin=dict(b=70, t=50),
     annotations=[dict(
@@ -145,16 +94,24 @@ fig2.add_annotation(
 fig2.show()
 ```
 
-Figure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.
+<div style= "margin-bottom:100px;"></div>
 
 <div style= "margin-bottom:100px;"></div>
 
----
+<span style="font-size: 150%;">***When we place data and analytics job postings on a common index with AI mentions, we can see a noticeable divergence.***</span>
 
 <div style= "margin-bottom:100px;"></div>
 
 ```{python}
 #| label: fig3
+
+sector = pd.read_csv(f"{DATA_DIR}/IndeedSectorJobPostings.csv")
+sector['month'] = pd.to_datetime(sector['dateString']).dt.to_period('M').dt.to_timestamp()
+sector_monthly = (
+    sector.groupby(['month', 'sectorName'])['value']
+    .mean().reset_index(name='index')
+)
+
 da = sector_monthly[sector_monthly['sectorName'] == 'Data & Analytics'].copy()
 base_da = da.loc[da['month'] == pd.Timestamp('2020-02-01'), 'index'].values[0]
 da['value'] = da['index'] / base_da * 100
@@ -182,7 +139,7 @@ fig3.update_layout(
     title="Data & Analytics Postings vs. AI-Mention Share (Indexed)",
     yaxis_title="Indexed to 100 at Feb 2020",
     legend=dict(orientation="h", yanchor="top", y=-0.08),
-    template="plotly_white",
+    template="plotly_dark",
     margin=dict(b=110, t=50),
     annotations=[dict(
         text="Source: Indeed Hiring Lab. Both series indexed to a common base for shape comparison.",
@@ -199,70 +156,139 @@ fig3.add_annotation(
 fig3.show()
 ```
 
-Figure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.
+<div style= "margin-bottom:100px;"></div>
 
 <div style= "margin-bottom:100px;"></div>
 
----
+<span style="font-size: 150%;">***Software Development, Mathematics and Scientific R&D Job Postings have tracked below the overall labor market since late 2022. This suggests that the decline is not a broad cyclical slowdown but a structural shift in data-adjacent roles.***</span>
 
 <div style= "margin-bottom:100px;"></div>
 
 ```{python}
-#| label: fig4
-total = pd.read_csv(f"{DATA_DIR}/TotalNonfarmJobOpenings.csv")
-total = total.rename(columns={'observation_date': 'date', 'JTSJOL': 'openings'})
-total['date'] = pd.to_datetime(total['date'])
-total['series'] = 'Total nonfarm'
+monthly_raw = pd.read_csv(f"{DATA_DIR}/angle1_JP_monthly.csv", parse_dates=["date"])
 
-pbs = pd.read_csv(f"{DATA_DIR}/ProfessionalAndBusinessJobOpenings.csv")
-pbs = pbs.rename(columns={'observation_date': 'date', 'JTS540099JOL': 'openings'})
-pbs['date'] = pd.to_datetime(pbs['date'])
-pbs['series'] = 'Professional & Business Services'
+monthly_raw["month"] = monthly_raw["date"].dt.to_period("M").dt.to_timestamp()
+monthly = (
+    monthly_raw.groupby(["month", "dataset", "group"])["value"]
+    .mean()
+    .reset_index()
+)
 
-jolts = pd.concat([total, pbs])
-
-def index_to_base(df):
-    base = df.loc[df['date'] == pd.Timestamp('2021-04-01'), 'openings'].values[0]
-    df = df.copy()
-    df['index'] = df['openings'] / base * 100
-    return df
-
-jolts = jolts.groupby('series', group_keys=False).apply(index_to_base)
-
-color_map4 = {
-    'Total nonfarm':                    GREY,
-    'Professional & Business Services': BLUE,
+COLORS = {
+    "Software Development Job Postings": "#3b82f6",
+    "Mathematics Job Postings": "#10b981",
+    "Scientific R&D Job Postings": "#f59e0b",
+}
+FILL_COLORS = {
+    "Software Development Job Postings": "rgba(59,130,246,0.12)",
+    "Mathematics Job Postings": "rgba(16,185,129,0.12)",
+    "Scientific R&D Job Postings": "rgba(245,158,11,0.12)",
+}
+LABELS = {
+    "Software Development Job Postings": "Software Dev (AI/data-adjacent)",
+    "Mathematics Job Postings": "Mathematics (Quant/Data/Stats)",
+    "Scientific R&D Job Postings": "Scientific R&D",
 }
 
+overall_m = (
+    monthly[monthly["dataset"] == "Overall Job Postings"][["month", "value"]]
+    .rename(columns={"value": "overall"})
+)
+
 fig4 = go.Figure()
-for name, grp in jolts.groupby('series'):
-    fig4.add_trace(go.Scatter(
-        x=grp['date'], y=grp['index'],
+for ds in ["Software Development Job Postings", "Mathematics Job Postings", "Scientific R&D Job Postings"]:
+    df = monthly[monthly["dataset"] == ds].sort_values("month").copy()
+    df = df.merge(overall_m, on="month")
+    df["divergence"] = df["value"] - df["overall"]
+    df["smooth_div"] = df["divergence"].rolling(3, center=True).mean()
+    fig4.add_trace(
+        go.Scatter(
+            x=df["month"],
+            y=df["smooth_div"],
+            name=LABELS[ds],
+            mode="lines",
+            fill="tozeroy",
+            line=dict(color=COLORS[ds], width=1.8),
+            fillcolor=FILL_COLORS[ds],
+        )
+    )
+
+fig4.add_hline(y=0, line_color="#6b7280", line_width=1.5)
+fig4.add_vline(x="2022-11-30", line_dash="dot", line_color="red", line_width=1.5)
+fig4.add_annotation(
+    x="2022-11-30", y=60,
+    text="ChatGPT launch<br>Nov 2022",
+    showarrow=False,
+    font=dict(size=11, color="red"),
+    xanchor="left", xshift=6,
+)
+
+fig4.update_layout(
+    template="plotly_dark",
+    plot_bgcolor="black",
+    paper_bgcolor="black",
+    hovermode="x unified",
+    margin=dict(l=60, r=40, t=90, b=110),
+    width=1000,
+    height=520,
+    legend=dict(orientation="h", y=-0.22, x=0, font=dict(size=12)),
+    title=dict(
+        text=(
+            "<b>Divergence from Overall Job Postings Index</b><br>"
+            "<sup>Index points above/below the overall labor market · 3-month rolling avg</sup>"
+        ),
+        x=0.04,
+        font=dict(size=18),
+    ),
+    xaxis=dict(title="", showgrid=False, tickformat="%b %Y"),
+    yaxis=dict(title="Δ Index points vs. Overall", gridcolor="#333333", zeroline=False),
+)
+
+fig4.show()
+```
+
+<div style= "margin-bottom:100px;"></div>
+
+<span style="font-size: 150%;">***Exploring other data-related sectors shows a similar trend: a climb through 2022, then a reversal.***</span>
+
+<div style= "margin-bottom:100px;"></div>
+
+```{python}
+#| label: fig1
+color_map = {
+    "Data & Analytics":                        BLUE,
+    "Software Development":                    GREY,
+    "IT Systems & Solutions":                  "#7b8794",
+    "IT Infrastructure, Operations & Support": "#52606d",
+}
+
+fig1 = go.Figure()
+for name, grp in sector_monthly.groupby('sectorName'):
+    fig1.add_trace(go.Scatter(
+        x=grp['month'], y=grp['index'],
         mode='lines', name=name,
-        line=dict(color=color_map4[name], width=2)
+        line=dict(color=color_map.get(name, GREY), width=2)
     ))
 
-fig4.add_hline(y=100, line_color="lightgrey", line_width=1)
-fig4.add_vline(x=CHATGPT, line_dash="dash", line_color="darkgrey")
-fig4.update_layout(
-    title="JOLTS Job Openings: Total and Professional & Business Services",
-    yaxis_title="Openings index (100 = Apr 2021)",
+fig1.add_hline(y=100, line_color="lightgrey", line_width=1)
+fig1.add_vline(x=CHATGPT, line_dash="dash", line_color="darkgrey")
+fig1.update_layout(
+    title="Tech and Data Sector Job Postings (2020–2024)",
+    yaxis_title="Posting index (100 = Feb 2020)",
     legend=dict(orientation="h", yanchor="top", y=-0.08),
-    template="plotly_white",
+    template="plotly_dark",
     margin=dict(b=110, t=50),
     annotations=[dict(
-        text="Source: BLS JOLTS via FRED.",
+        text="Source: Indeed Hiring Lab.",
         showarrow=False, xref="paper", yref="paper",
-        x=1, y=-0.10, xanchor="right", font=dict(size=10, color="grey")
+        x=1, y=-0.2, xanchor="right", font=dict(size=10, color="grey")
     )]
 )
-fig4.add_annotation(
+fig1.add_annotation(
     x=CHATGPT, xref="x", yref="paper", y=1,
     text="ChatGPT release", showarrow=False,
     xanchor="left", yanchor="bottom",
     font=dict(size=10, color="darkgrey")
 )
-fig4.show()
+fig1.show()
 ```
-
-Figure 4. Both total and professional and business services job openings remain well below their 2022 highs.

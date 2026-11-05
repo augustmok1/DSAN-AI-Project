@@ -1,38 +1,87 @@
 [
   {
-    "objectID": "index.html#project-scope",
-    "href": "index.html#project-scope",
-    "title": "Tokens vs. Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S.",
-    "section": "Project Scope",
-    "text": "Project Scope\nDoes AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?\n“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.\n“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.\nThe test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes."
+    "objectID": "visualization.html",
+    "href": "visualization.html",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "Data visualization\n    What the data shows before we model it\n    Job postings, tech stocks and public interest in AI, side by side\n    Gus Mokrzycki"
   },
   {
-    "objectID": "index.html#introduction-motivation",
-    "href": "index.html#introduction-motivation",
-    "title": "Tokens vs. Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S.",
-    "section": "Introduction & Motivation",
-    "text": "Introduction & Motivation\nThe public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while hard labor data shows only a recent and contested decline concentrated among early-career workers since late 2022 (Cite Literature). My project tests if that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides.\nThe question matters because narratives have consequences. A story that runs ahead of reality can steer students out of a viable field and freeze entry-level hiring before the data actually justifies it. On the other hand, a story that lags means workers, educator and policymakers underreact to a genuine shift.\nAnswering the question allows for those various groups to act on a measured signal rather than just speculation. If AI signals reliably lead changes in data-job demand, they serve as an early warning for a workforce in transition. If they do not, that itself shows theat the labor data already captures what the discourse claims to add."
+    "objectID": "visualization.html#what-we-are-looking-for",
+    "href": "visualization.html#what-we-are-looking-for",
+    "title": "Data Visualization",
+    "section": "What we are looking for",
+    "text": "What we are looking for\nThe introduction left an open question: data and software postings collapsed after 2022, but the timing points at interest rates as much as at AI. Before any model tries to separate those stories, I want to see the evidence with my own eyes. So I start with the postings themselves, then bring in the signals one at a time and see whether any of them move with postings, or ahead of them. This page is about looking, not proving. Every relationship here is a lead for the models on the next page, not a conclusion."
   },
   {
-    "objectID": "index.html#official-research-questions",
-    "href": "index.html#official-research-questions",
-    "title": "Tokens vs. Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S.",
-    "section": "Official Research Questions",
-    "text": "Official Research Questions\n\nPrimary Research Question: Does AI sentiment carry predictive information about data-job demand beyond what the labor data alone provides?\nSecondary Research Question: Did the public release of ChatGPT mark a break in U.S. data-job demand, AI-jobs sentiment, or in both?"
+    "objectID": "visualization.html#boom-and-bust",
+    "href": "visualization.html#boom-and-bust",
+    "title": "Data Visualization",
+    "section": "Boom and bust",
+    "text": "Boom and bust\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Top: Indeed job postings indexed to February 2020 (= 100), monthly averages of daily values, February 2020 to May 2026. Bottom: change from the same month a year earlier. Shaded bands mark the 2021 to 2022 hiring boom and the Federal Reserve’s rate-hiking cycle (March 2022 to August 2023); the dashed line marks ChatGPT’s release. Source: Indeed Hiring Lab (CC BY 4.0).\n\n\n\n\nThe three series move in the same direction, but not with the same force. From early 2021 to March 2022, Data Analytics postings more than doubled while all postings rose about 60 percent. The fall was just as lopsided: from their peaks, Data Analytics postings dropped about 71 percent and Software about 73 percent, compared with 37 percent for the market as a whole. At the worst point in June 2023, Data Analytics postings were down 54 percent from a year earlier, while all postings were down 17 percent.\nThe bottom panel is what this view adds to the chart in the introduction. It shows that the data and software series are not just noisier versions of the overall market; they amplify it, falling about twice as far from their peaks with year-over-year drops about three times as deep. Since mid-2024, the swings have died out and all three series have been nearly flat, with Data Analytics stuck around 60 percent of its pre-pandemic level. Why the decline happened, and why it stopped without a recovery, is what the outside signals below help explore."
   },
   {
-    "objectID": "index.html#initial-literature-review",
-    "href": "index.html#initial-literature-review",
-    "title": "Tokens vs. Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S.",
-    "section": "Initial Literature Review",
-    "text": "Initial Literature Review\n\nPrior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence\n\nSource/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen\nCore Finding: Using high-frequency payroll data, the authors found that early-career workers aged 22 to 25 in the most AI-exposed occupations saw a 16% relative decline in employment (up 3% from the previous year), while older workers held steady. The authors found that the employment decline was concentrated in roles where Artificial Intelligence automates rather than augments their work. Around the time of the public release of ChatGPT was where these employment patterns appeared to start.\nHow it informs the project: This work contextualizes and grounds the labor-outcome side of my question. It also serves the central tension of my research: that the displacement signal is real. I plan to test whether the surrounding AI signals lead or coincide with the observed employment decline\n\n\n\nPrior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes\n\nSource/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)\nCore Finding: The authors of this paper built a benchmark for forecasting sector-level job demand from text and structured data. They used the same Indeed Hiring Lab postings index that I analyzed under strict controls. In their findings, they discovered that a simple moving-average baseline was hard to beat.\nHow it informs the project: This paper is the closest existing work to my project goal and shaped my methodology directly. I plan to use time-ordered out-of-sample evaluation and to benchmark similarly to a naive baseline. What makes our projects different is that I plan on keeping my forecasting model classical and testing AI sentiment as an exogenous predictor rather than prompting an language model to forecast like they did."
+    "objectID": "visualization.html#three-things-that-might-explain-it",
+    "href": "visualization.html#three-things-that-might-explain-it",
+    "title": "Data Visualization",
+    "section": "Three things that might explain it",
+    "text": "Three things that might explain it\nThe introduction named three kinds of outside signals, and this page looks at each one with monthly data back to 2020: economic conditions through interest rates, financial markets through tech stocks and public interest through Google searches.\n\nInterest rates\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Effective federal funds rate, monthly average, January 2020 to May 2026. The shaded band marks the hiking cycle from the first increase (March 2022) to the last (August 2023). Source: Board of Governors of the Federal Reserve System via FRED (series FEDFUNDS).\n\n\n\n\nThe federal funds rate is the Federal Reserve’s main lever on the economy, and it sets the price of borrowing for everyone else. When it rises, growth plans get more expensive, and hiring for new projects is often the first thing firms trim. Tech and data teams, which depend heavily on investment in future growth, should feel that more than most. The pattern is unusually sharp: the rate sat near zero for two years, then rose by more than five points between March 2022 and August 2023, the fastest increase in four decades. Cuts began in September 2024 and brought the rate down to about 3.6 percent by 2026. Against the job-posting series, the timing of the first hike stands out: it came in the same month Data Analytics postings peaked.\n\n\nTech stocks\n\n\n\n\n                            \n                                            \n\n\nFigure 3: Monthly average closing prices indexed to December 2020 (= 100), log scale, December 2020 to May 2026. QQQ tracks the Nasdaq-100; the four companies are the ones used as predictors in our models. Source: Yahoo Finance.\n\n\n\n\nTech stock prices capture what investors expect from the technology sector, and those expectations shape how freely tech firms hire. The pattern has two acts. In 2022, almost everything fell together as interest rates rose, with QQQ bottoming in October 2022. After ChatGPT, the market split: NVIDIA rose roughly sixteenfold from its December 2020 level and Alphabet more than quadrupled, while C3.ai, an AI software company, fell more than 90 percent. That split matters for this project. “Tech stocks” are not one signal, and the companies most tied to AI moved very differently from the rest.\n\n\nPublic interest in AI\n\n\n\n\n                            \n                                            \n\n\nFigure 4: Google Trends search interest in the United States, monthly, January 2020 to May 2026. Each term was downloaded separately, so each panel is scaled to its own peak (= 100); compare shapes and timing, not heights across panels. Source: Google Trends.\n\n\n\n\nThe introduction tracked AI inside job postings, where the share mentioning AI more than tripled after mid-2023. Search interest shows the public side of the same shift: a rough measure of how much attention people are paying to AI, and attention tends to come before adoption. Before November 2022, searches for “Generative AI” and “LLM” barely registered. Both crossed 10 percent of their eventual peak in spring 2023 and kept climbing into 2026. “AI Jobs” followed about a year later, and “AI Agents” only took off in 2025. The order is telling: first people learned the tools existed, then they started looking for work built around them.\nThe timing also sets up a puzzle. Public interest in AI rose fastest in 2023 to 2026, the same years data and software postings stayed flat near their lows. If AI interest pushes job demand at all, it does not show up as a simple same-month rise."
   },
   {
-    "objectID": "index.html#data-source-orientation",
-    "href": "index.html#data-source-orientation",
-    "title": "Tokens vs. Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S.",
-    "section": "Data Source Orientation",
-    "text": "Data Source Orientation\n\n\n\n\n\n\n\n\n\nData Asset Name\nSource Agency\nFormat (.csv, API, SQL)\nRow/Column Count (Est.)\n\n\n\n\nJOLTS Total Nonfarm Job Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nJOLTS Professional & Business Services Openings\nBLS JOLTS via FRED\n.csv (also API)\n~61 x 2\n\n\nIndeed Sector Job-Postings Index (Data & Analytics + tech)\nIndeed Hiring Lab\n.csv\n~9,300 x 8\n\n\nIndeed National AI-Mention Tracker (share of postings)\nIndeed Hiring Lab\n.csv\n~2,700 x 6"
+    "objectID": "visualization.html#lining-them-up",
+    "href": "visualization.html#lining-them-up",
+    "title": "Data Visualization",
+    "section": "Lining them up",
+    "text": "Lining them up\n\nJob postings and interest rates\n\n\n\n\n                            \n                                            \n\n\nFigure 5: Top: Indeed job postings, Feb 2020 = 100. Bottom: effective federal funds rate. Both monthly, January 2020 to May 2026; the panels share a time axis but not a scale. Shading marks the hiking cycle; the dotted line marks the first rate cut. Sources: Indeed Hiring Lab (CC BY 4.0), FRED (FEDFUNDS).\n\n\n\n\nOn the way down, postings and rates line up closely. Data Analytics postings peaked in March 2022, the month of the first hike, and fell for as long as the Fed kept raising rates. They stopped falling steeply around August 2023, when the hikes ended. That is a much tighter match than anything in the AI signals.\nThe way back up is a different story. Since the first cut in September 2024, the rate has dropped about 1.5 points, but Data Analytics postings slipped from 69 to 62 and all postings from 112 to 102. Only Software ticked up, from 69 to 73. If borrowing costs were the whole explanation, cheaper money should have brought at least some hiring back. The two series appear to move together during the hiking cycle and apart after it, which suggests rates explain the fall better than they explain the stall. Something else is holding postings down, and AI adoption is one candidate the models can test.\n\n\nJob postings and tech stocks\n\n\n\n\n                            \n                                            \n\n\nFigure 6: Job postings and QQQ both re-indexed to December 2020 (= 100), monthly, December 2020 to May 2026. Re-indexing puts all four series on one scale starting from the same point. Sources: Indeed Hiring Lab (CC BY 4.0), Yahoo Finance.\n\n\n\n\nThrough 2021, postings and stocks rose together. Then the order of events gets interesting. QQQ peaked in late 2021, a few months before Data Analytics postings peaked in March 2022. QQQ then bottomed in October 2022, while postings kept falling until mid-2023. At both turning points, stocks appear to have moved first, by several months. After that, the two stories split completely: by May 2026, QQQ was at 230 on this scale while Data Analytics postings were at 75.\nOver the full period, the two series are actually negatively correlated (about -0.67 for Data Analytics against QQQ), which is a warning more than a finding. Two trending series can line up or diverge for reasons that have nothing to do with each other. Whether stock prices carry real information about future postings, perhaps with a lag, is exactly what the time-series models need to test.\n\n\nJob postings and job seekers\n\n\n\n\n                            \n                                            \n\n\nFigure 7: Top: Indeed Data & Analytics job postings, Feb 2020 = 100. Bottom: Google search interest in “data analyst jobs” in the United States, scaled to its own peak (= 100). Both monthly, January 2020 to May 2026. The panels share a time axis but not a scale. Sources: Indeed Hiring Lab (CC BY 4.0), Google Trends.\n\n\n\n\nThis is the comparison that hits closest to home for me. Searches for “data analyst jobs” were at 30 on this scale in February 2020. They climbed steadily through the boom, kept climbing through the bust and reached 96 in May 2026. Over the same stretch, Data Analytics postings went from 100 to about 60. The two lines moved together in 2021 and have moved in opposite directions ever since.\nSearch interest is not a count of applicants, so I read this carefully. But it suggests the squeeze I feel as a student is real: interest in the field kept growing after demand for it stopped. That is a supply-side story the forecasting models do not capture directly, and it is worth keeping in mind when reading their results."
+  },
+  {
+    "objectID": "visualization.html#what-im-taking-into-the-models",
+    "href": "visualization.html#what-im-taking-into-the-models",
+    "title": "Data Visualization",
+    "section": "What I’m taking into the models",
+    "text": "What I’m taking into the models\n\nData and software postings amplify the market. They rose and fell far more than all postings did (about a 71 percent drop from peak, compared with 37 percent), so models built for the overall market may understate how much these series can move.\nInterest rates fit the fall, not the stall. Postings peaked the month the Fed started hiking and fell until the hikes ended, but they did not recover once rates were cut. Public interest in AI climbed during exactly that stall, which makes AI worth testing as an explanation, though the pictures alone cannot separate it from other factors.\nStocks seem to turn before postings. Tech stocks peaked and bottomed several months before data and software postings did in 2022 and 2023, which makes lagged stock prices a reasonable candidate predictor.\nOne unusual period dominates the data. The 2021 to 2023 boom and bust is the largest movement in every series. Models will learn mostly from that episode, which may not resemble what comes next."
+  },
+  {
+    "objectID": "visualization.html#from-pictures-to-models",
+    "href": "visualization.html#from-pictures-to-models",
+    "title": "Data Visualization",
+    "section": "From pictures to models",
+    "text": "From pictures to models\nThe visual evidence points in a clear direction without settling anything. Data Analytics and Software postings behave differently from the market as a whole. Interest rates line up with their decline, tech stocks appear to move ahead of them and AI interest rose while they stalled. But several of the most striking relationships here come from series that trend in opposite directions, which is exactly where eyeballing goes wrong. The next page tests these leads formally with ARIMA, ARIMAX and SARIMAX models, asking whether interest rates, stock prices and search interest improve forecasts beyond what the job-posting history alone can do."
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "AI and the Data Job Market",
+    "section": "",
+    "text": "My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.\nThe first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively.\nThe second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.\nI chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses."
+  },
+  {
+    "objectID": "data.html#data-selection",
+    "href": "data.html#data-selection",
+    "title": "AI and the Data Job Market",
+    "section": "",
+    "text": "My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.\nThe first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively.\nThe second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.\nI chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses."
+  },
+  {
+    "objectID": "data.html#data-acquisition",
+    "href": "data.html#data-acquisition",
+    "title": "AI and the Data Job Market",
+    "section": "Data Acquisition",
+    "text": "Data Acquisition\nI acquired the two BLS JOLTS datasets from FRED (Federal Reserve Economic Data) as CSV files. Each file contains monthly observations dates and their related number of job openings in thousands dating back to 2020. I obtained the two Indeed Hiring Lab datasets as CSV files from their website as well."
+  },
+  {
+    "objectID": "data.html#data-cleaning",
+    "href": "data.html#data-cleaning",
+    "title": "AI and the Data Job Market",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\nCleaning the data centered on bringing these four datasets of different shapes and frequencies onto a common monthly basis. The two JOLTS datasets where already monthly and needed only date parsing and selection of the openings column already in the file. The two Indeed datasets were daily, so I aggregated each to monthly by averaging the daily values within each month."
+  },
+  {
+    "objectID": "data.html#eda",
+    "href": "data.html#eda",
+    "title": "AI and the Data Job Market",
+    "section": "EDA",
+    "text": "EDA\n\n\n\nEmployer demand for AI skills has surged continuously since ChatGPT’s release\n\n\n\n\n\n                            \n                                            \n\n\n\n\n\n\n\n\nWhen we place data and analytics job postings on a common index with AI mentions, we can see a noticeable divergence.\n\n\n\n\n\n                            \n                                            \n\n\n\n\n\n\n\n\nSoftware Development, Mathematics and Scientific R&D Job Postings have tracked below the overall labor market since late 2022. This suggests that the decline is not a broad cyclical slowdown but a structural shift in data-adjacent roles.\n\n\n\n\n\n                            \n                                            \n\n\n\n\n\nExploring other data-related sectors shows a similar trend: a climb through 2022, then a reversal."
   },
   {
     "objectID": "about.html",
@@ -42,38 +91,45 @@
     "text": "About this site"
   },
   {
-    "objectID": "data.html",
-    "href": "data.html",
-    "title": "Tokens vs. Humans: AI Sentiment and the Demand for Data Jobs",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "What will employers expect from me when I graduate?",
     "section": "",
-    "text": "My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.\nThe first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively.\nThe second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.\nI chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses."
+    "text": "AI and the data job market\n    What will employers expect from me when I graduate?\n    How AI adoption is reshaping data and software job openings\n    Gus Mokrzycki\n  \n  \n    \n      Typical listing\n      Data Analyst\n      Washington, DC\n      Full-time, entry level\n    \n    Requirements\n    \n      Degree in statistics, mathematics or a related field\n      SQL and Python or R\n      Experience with Tableau or Power BI\n      Building and evaluating machine learning models\n      Familiarity with generative AI and LLM tools"
   },
   {
-    "objectID": "data.html#data-selection",
-    "href": "data.html#data-selection",
-    "title": "Tokens vs. Humans: AI Sentiment and the Demand for Data Jobs",
-    "section": "",
-    "text": "My project utilizes four public datasets that were chosen to measure two things: the demand for data-related jobs in the U.S. and the AI signals that might predict that demand.\nThe first two datasets are from the U.S. Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) and measure the total number of job openings in the U.S. and the number of job openings in Professional and Business Services, respectively.\nThe second two datasets are from the Indeed Hiring Lab and measure the number of job postings on Indeed that mention AI and the number of job postings in the Data & Analytics and Tech sectors, respectively.\nI chose these four datasets because they are publicly available, reliable and provide a comprehensive view of the U.S. labor market and AI-related job demand. The data serves as context for both the importance of my research questions and my testable hypotheses."
+    "objectID": "index.html#why-this-matters",
+    "href": "index.html#why-this-matters",
+    "title": "What will employers expect from me when I graduate?",
+    "section": "Why this matters",
+    "text": "Why this matters\nOver the past few years, AI tools have moved from research labs into everyday work. Tools that can write code, summarize documents and analyze data are now built into the software analysts and engineers use daily. That raises a real question about the labor market. Is AI replacing parts of these jobs, reshaping what the jobs involve or creating new kinds of work? The answer probably differs by occupation, and jobs tied to data and software are some of the first places we would expect to see change.\nThe job postings data already shows that something unusual happened to these roles.\n\n\n\n\n                            \n                                            \n\n\nFigure 1: Indeed job postings indexed to February 2020 (= 100), monthly averages of daily values through May 2026. Data & Analytics postings doubled during the 2021 to 2022 hiring boom, then fell to about 62, well below their pre-pandemic level, while postings across the whole labor market settled back near 100. The decline began in spring 2022, months before ChatGPT was released. Source: Indeed Hiring Lab (CC BY 4.0).\n\n\n\n\nFigure 1 is the starting point for this project. Data Analytics and Software postings rose and fell far more sharply than the market as a whole, and both now sit well below where they were before the pandemic. The timing matters though. The drop started in early 2022, when the Federal Reserve began raising interest rates, not after ChatGPT arrived. So the chart cannot tell us on its own how much of the decline is about AI and how much is about the economy. Separating those two stories is the core of this project.\nThe postings that remain are also asking for something different. The share of all U.S. job postings that mention AI fell to about 1.7 percent in mid-2023, then more than tripled to about 5.6 percent by May 2026, while Data Analytics postings kept drifting lower (Figure 2). Fewer postings, with more of them asking for AI, is what makes me think these jobs are changing shape and not just shrinking.\n\n\n\n\n                            \n                                            \n\n\nFigure 2: Share of all U.S. Indeed job postings that mention AI or generative AI terms, monthly averages of daily values, February 2020 through May 2026. After the 2022 hiring boom faded, AI mentions climbed steadily even as Data Analytics postings kept falling. Source: Indeed Hiring Lab AI tracker (CC BY 4.0)."
   },
   {
-    "objectID": "data.html#data-acquisition",
-    "href": "data.html#data-acquisition",
-    "title": "Tokens vs. Humans: AI Sentiment and the Demand for Data Jobs",
-    "section": "Data Acquisition",
-    "text": "Data Acquisition\nI acquired the two BLS JOLTS datasets from FRED (Federal Reserve Economic Data) as CSV files. Each file contains monthly observations dates and their related number of job openings in thousands dating back to 2020. I obtained the two Indeed Hiring Lab datasets as CSV files from their website as well."
+    "objectID": "index.html#why-i-care",
+    "href": "index.html#why-i-care",
+    "title": "What will employers expect from me when I graduate?",
+    "section": "Why I care",
+    "text": "Why I care\nI am a statistics major planning to pursue a master’s in data science, which means the jobs in that red line are the jobs I am preparing for. When I look at postings for data analyst or data scientist roles, I see terms like machine learning, Python and generative AI sitting next to the statistical skills I have spent years building.\n\nIs the market for these roles growing, shrinking or just changing shape?\n\nThis portfolio is my attempt to answer that with data instead of headlines, and to figure out what employers will actually expect from me when I graduate."
   },
   {
-    "objectID": "data.html#data-cleaning",
-    "href": "data.html#data-cleaning",
-    "title": "Tokens vs. Humans: AI Sentiment and the Demand for Data Jobs",
-    "section": "Data Cleaning",
-    "text": "Data Cleaning\nCleaning the data centered on bringing these four datasets of different shapes and frequencies onto a common monthly basis. The two JOLTS datasets where already monthly and needed only date parsing and selection of the openings column already in the file. The two Indeed datasets were daily, so I aggregated each to monthly by averaging the daily values within each month."
+    "objectID": "index.html#what-we-are-investigating",
+    "href": "index.html#what-we-are-investigating",
+    "title": "What will employers expect from me when I graduate?",
+    "section": "What we are investigating",
+    "text": "What we are investigating\nSo the question is whether the things we can measure about AI, the economy and the markets actually show up in who is hiring. The project follows three job-opening series: Data Analytics openings, Software openings and overall job openings. Comparing them lets us ask whether data and software roles behave differently from the labor market as a whole, which Figure 1 suggests they do. We pair these series with outside signals that could explain or anticipate those movements:\n\nPublic interest in AI, such as search activity and the share of job postings that mention AI\nFinancial markets, especially tech-sector stock performance\nEconomic conditions, including interest rates, inflation and other indicators"
   },
   {
-    "objectID": "data.html#eda",
-    "href": "data.html#eda",
-    "title": "Tokens vs. Humans: AI Sentiment and the Demand for Data Jobs",
-    "section": "EDA",
-    "text": "EDA\n\n\n\n\n\n                            \n                                            \n\n\nFigure 1. Tech and data sector job postings have declined steadily since their peak in 2022.\n\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigure 2. AI mentions in U.S. job postings have more than doubled since the release of ChatGPT.\n\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigure 3. Rising AI demand and falling data-job postings have diverged sharply since 2023.\n\n\n\n\n\n\n\n\n\n                            \n                                            \n\n\nFigure 4. Both total and professional and business services job openings remain well below their 2022 highs."
+    "objectID": "index.html#research-questions",
+    "href": "index.html#research-questions",
+    "title": "What will employers expect from me when I graduate?",
+    "section": "Research questions",
+    "text": "Research questions\n\nHow do Data Analytics and Software job openings differ from overall U.S. job openings in their response to macroeconomic indicators, tech stock prices and public interest signals?\nCan traditional time-series and deep learning models use public interest, macroeconomic and tech stock signals to improve forecasts of AI- and data-related job-opening trends?\nCan NLP-derived measures from job records and descriptions reveal how AI adoption is reshaping cross-sectoral hiring and occupational skill demand over time?"
+  },
+  {
+    "objectID": "index.html#our-approach",
+    "href": "index.html#our-approach",
+    "title": "What will employers expect from me when I graduate?",
+    "section": "Our approach",
+    "text": "Our approach\nWe start by exploring how job openings move alongside the outside indicators, using visualization and regression. We then forecast job-opening trends with traditional time-series models (ARIMA, ARIMAX and SARIMAX) and with deep learning models (RNN, LSTM and GRU), and compare how well each performs on the same data. Finally, we use NLP on job records to measure how hiring shifts across occupations with different levels of AI exposure, and extending that work to full job descriptions is the next step. That last piece brings the project back to the question I started with, since it looks directly at the skills employers are asking for.\n\n\n\n\n\n\nTipWhere this ends up\n\n\n\nTraditional time-series models forecast these trends more reliably than the deep learning models, and the outside signals mattered more for Data Analytics and Software openings than for openings overall. The pages that follow show how we got there, starting with a closer look at the data in Data Visualization."
   }
 ]

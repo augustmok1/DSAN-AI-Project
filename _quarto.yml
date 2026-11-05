@@ -3,25 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "Tokens vs. Humans: AI Sentiment and the Demand for Data Jobs"
+  title: "AI and the Data Job Market"
   navbar:
     left:
       - href: index.qmd
-        text: "Home"
-      - href: data.qmd
-        text: "Data"
-      - about.qmd
+        text: Introduction
+      - href: visualization.qmd
+        text: Data Visualization
 
 format:
   html:
-    theme:
-      light: flatly
-      dark: darkly
-    css: custom.scss
+    theme: [cosmo, styles.scss]
     toc: true
-    toc-location: left
-    fontsize: 1.05rem
-    grid:
-      body-width: 900px
-
-
+    toc-depth: 2
+    mermaid:
+      theme: neutral

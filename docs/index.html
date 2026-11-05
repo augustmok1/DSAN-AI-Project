@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Gus Mokrzycki">
 
-<title>Tokens vs.&nbsp;Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S. – Tokens vs. Humans: AI Sentiment and the Demand for Data Jobs</title>
+<title>What will employers expect from me when I graduate? – AI and the Data Job Market</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,7 +27,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -39,14 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7b253ebb8905670ca9e2290904c16179.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-15fcad9ab7c555966ae450348bd48772.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-7b253ebb8905670ca9e2290904c16179.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-84ceb299ddf9a4b59820b766f48bd1a7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,174 +71,29 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 
-<link rel="stylesheet" href="custom.scss">
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+<script>
+
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+
+</script>
+
+<script type="module">import "https://cdn.plot.ly/plotly-3.6.0.min"</script>
+
+
+
+
+
 </head>
 
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -249,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Tokens vs.&nbsp;Humans: AI Sentiment and the Demand for Data Jobs</span>
+    <span class="navbar-title">AI and the Data Job Market</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -260,20 +112,15 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html"> 
-<span class="menu-text">Data</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./visualization.html"> 
+<span class="menu-text">Data Visualization</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -281,36 +128,39 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#project-scope" id="toc-project-scope" class="nav-link active" data-scroll-target="#project-scope">Project Scope</a></li>
-  <li><a href="#introduction-motivation" id="toc-introduction-motivation" class="nav-link" data-scroll-target="#introduction-motivation">Introduction &amp; Motivation</a></li>
-  <li><a href="#official-research-questions" id="toc-official-research-questions" class="nav-link" data-scroll-target="#official-research-questions">Official Research Questions</a></li>
-  <li><a href="#initial-literature-review" id="toc-initial-literature-review" class="nav-link" data-scroll-target="#initial-literature-review">Initial Literature Review</a></li>
-  <li><a href="#data-source-orientation" id="toc-data-source-orientation" class="nav-link" data-scroll-target="#data-source-orientation">Data Source Orientation</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link active" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  <li><a href="#why-i-care" id="toc-why-i-care" class="nav-link" data-scroll-target="#why-i-care">Why I care</a></li>
+  <li><a href="#what-we-are-investigating" id="toc-what-we-are-investigating" class="nav-link" data-scroll-target="#what-we-are-investigating">What we are investigating</a></li>
+  <li><a href="#research-questions" id="toc-research-questions" class="nav-link" data-scroll-target="#research-questions">Research questions</a></li>
+  <li><a href="#our-approach" id="toc-our-approach" class="nav-link" data-scroll-target="#our-approach">Our approach</a></li>
   </ul>
 </nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tokens vs.&nbsp;Humans: AI Sentiment and the Evolving Demand for Data Jobs in the U.S.</h1>
+<h1 class="title">What will employers expect from me when I graduate?</h1>
+<p class="subtitle lead">How AI adoption is reshaping data and software job openings</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gus Mokrzycki </p>
+          </div>
+  </div>
     
   
     
@@ -321,97 +171,154 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="AIPhoto.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<div class="hero column-screen">
+<div class="hero-inner">
+  <div class="hero-text">
+    <p class="hero-kicker">AI and the data job market</p>
+    <p class="hero-title">What will employers expect from me when I&nbsp;graduate?</p>
+    <p class="hero-subtitle">How AI adoption is reshaping data and software job openings</p>
+    <p class="hero-byline">Gus Mokrzycki</p>
+  </div>
+  <figure class="posting-card figure" aria-label="Illustrative data analyst job posting">
+    <div class="posting-head">
+      <p class="posting-label">Typical listing</p>
+      <p class="posting-role">Data Analyst</p>
+      <p class="posting-meta">Washington, DC</p>
+      <p class="posting-meta">Full-time, entry level</p>
+    </div>
+    <p class="posting-label">Requirements</p>
+    <ul class="posting-reqs">
+      <li>Degree in statistics, mathematics or a related field</li>
+      <li>SQL and Python or R</li>
+      <li>Experience with Tableau or Power BI</li>
+      <li><mark>Building and evaluating machine learning models</mark></li>
+      <li><mark>Familiarity with generative AI and LLM tools</mark></li>
+    </ul>
+  </figure>
+</div>
+</div>
+<section id="why-this-matters" class="level2" data-kicker="The problem">
+<h2 data-kicker="The problem" class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
+<p>Over the past few years, AI tools have moved from research labs into everyday work. Tools that can write code, summarize documents and analyze data are now built into the software analysts and engineers use daily. That raises a real question about the labor market. Is AI replacing parts of these jobs, reshaping what the jobs involve or creating new kinds of work? The answer probably differs by occupation, and jobs tied to data and software are some of the first places we would expect to see change.</p>
+<p>The job postings data already shows that something unusual happened to these roles.</p>
+<div id="cell-fig-indexed-openings" class="cell" data-execution_count="1">
+<div id="fig-indexed-openings" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-indexed-openings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="height:440px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="0621a5be-a3d9-415f-90a8-b002440f24ca" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("0621a5be-a3d9-415f-90a8-b002440f24ca")) {                    Plotly.newPlot(                        "0621a5be-a3d9-415f-90a8-b002440f24ca",                        [{"hovertemplate":"%{y:.0f}\u003cextra\u003eAll openings\u003c\u002fextra\u003e","line":{"color":"#8a9198","dash":"dot","width":2},"mode":"lines","name":"All openings","x":["2020-02-01T00:00:00.000000000","2020-03-01T00:00:00.000000000","2020-04-01T00:00:00.000000000","2020-05-01T00:00:00.000000000","2020-06-01T00:00:00.000000000","2020-07-01T00:00:00.000000000","2020-08-01T00:00:00.000000000","2020-09-01T00:00:00.000000000","2020-10-01T00:00:00.000000000","2020-11-01T00:00:00.000000000","2020-12-01T00:00:00.000000000","2021-01-01T00:00:00.000000000","2021-02-01T00:00:00.000000000","2021-03-01T00:00:00.000000000","2021-04-01T00:00:00.000000000","2021-05-01T00:00:00.000000000","2021-06-01T00:00:00.000000000","2021-07-01T00:00:00.000000000","2021-08-01T00:00:00.000000000","2021-09-01T00:00:00.000000000","2021-10-01T00:00:00.000000000","2021-11-01T00:00:00.000000000","2021-12-01T00:00:00.000000000","2022-01-01T00:00:00.000000000","2022-02-01T00:00:00.000000000","2022-03-01T00:00:00.000000000","2022-04-01T00:00:00.000000000","2022-05-01T00:00:00.000000000","2022-06-01T00:00:00.000000000","2022-07-01T00:00:00.000000000","2022-08-01T00:00:00.000000000","2022-09-01T00:00:00.000000000","2022-10-01T00:00:00.000000000","2022-11-01T00:00:00.000000000","2022-12-01T00:00:00.000000000","2023-01-01T00:00:00.000000000","2023-02-01T00:00:00.000000000","2023-03-01T00:00:00.000000000","2023-04-01T00:00:00.000000000","2023-05-01T00:00:00.000000000","2023-06-01T00:00:00.000000000","2023-07-01T00:00:00.000000000","2023-08-01T00:00:00.000000000","2023-09-01T00:00:00.000000000","2023-10-01T00:00:00.000000000","2023-11-01T00:00:00.000000000","2023-12-01T00:00:00.000000000","2024-01-01T00:00:00.000000000","2024-02-01T00:00:00.000000000","2024-03-01T00:00:00.000000000","2024-04-01T00:00:00.000000000","2024-05-01T00:00:00.000000000","2024-06-01T00:00:00.000000000","2024-07-01T00:00:00.000000000","2024-08-01T00:00:00.000000000","2024-09-01T00:00:00.000000000","2024-10-01T00:00:00.000000000","2024-11-01T00:00:00.000000000","2024-12-01T00:00:00.000000000","2025-01-01T00:00:00.000000000","2025-02-01T00:00:00.000000000","2025-03-01T00:00:00.000000000","2025-04-01T00:00:00.000000000","2025-05-01T00:00:00.000000000","2025-06-01T00:00:00.000000000","2025-07-01T00:00:00.000000000","2025-08-01T00:00:00.000000000","2025-09-01T00:00:00.000000000","2025-10-01T00:00:00.000000000","2025-11-01T00:00:00.000000000","2025-12-01T00:00:00.000000000","2026-01-01T00:00:00.000000000","2026-02-01T00:00:00.000000000","2026-03-01T00:00:00.000000000","2026-04-01T00:00:00.000000000","2026-05-01T00:00:00.000000000"],"y":{"dtype":"f8","bdata":"lv7zmRwDWUAyfRPTN6FXQO41F5KmDFFAtI4w6whzT0Ac6LSBToNRQKGWCGqJkFNA7b7S7iu9VEDP91PjpZNVQC1a2aKVnVZA20CnDXRiV0C21lprrbVXQNyhuh2qa1hAX\u002fEVX\u002fHNWUDFhlhsiKVbQAll9LasfV5AXkXiVSQWYEAAAAAAAKxgQIN+N+h3K2FAzDrCrCNkYUCMJb9Y8uNhQBg\u002fd\u002fFzX2JA4XoUrkcdY0A2Mlgjg6VjQJgsf8nyj2NACtejcD3mY0D8k8A\u002fCQxkQKQpFWcf+mNAjQzWyGANZEByaJHtfNNjQB1h1hFmdWNAbj7l5lMuY0DOhaQpFdNiQMgXiHyBkGJA7FG4HoV3YkA2Mlgjgw1iQCPxKhKvkmFAWS1vjGASYUBfjufleN5gQM3MzMzMAGFAjp7g6AnWYEDxGXYFyHlgQAbZWZCdLWBAqCWCWiIQYEDVMcGDecJfQJyYvonpO19Asw+fYVfQXkDSExw9wVFeQDh6gqMn2F1AZ2wZ2CyNXUDF9E1M36RdQDyYJ+rfoF1A11prrbX2XECuR+F6FI5cQLvUpEtNalxAhlhsiMVWXECdffgMuxpcQOMwNA5Dg1tATfBgnqhfW0DB0RMcPZFbQDrnnHPOiVtAt23btm1TW0DROAyNw\u002fBaQGcfPsOusFpA+bmLn7t4WkASyuhtWVNaQDR8OMOHE1pAAdsPsP0wWkBaq2OCB7NZQP1u0O8GPVlA3t3d3d1VWUAKjp7g6LlZQPIqEq8i0VlAslreGMEkWkB48XMXP\u002fdZQOZC0pSKq1lAPS\u002fH83J8WUA="},"type":"scatter"},{"hovertemplate":"%{y:.0f}\u003cextra\u003eSoftware\u003c\u002fextra\u003e","line":{"color":"#3f4a54","dash":"solid","width":2},"mode":"lines","name":"Software","x":["2020-02-01T00:00:00.000000000","2020-03-01T00:00:00.000000000","2020-04-01T00:00:00.000000000","2020-05-01T00:00:00.000000000","2020-06-01T00:00:00.000000000","2020-07-01T00:00:00.000000000","2020-08-01T00:00:00.000000000","2020-09-01T00:00:00.000000000","2020-10-01T00:00:00.000000000","2020-11-01T00:00:00.000000000","2020-12-01T00:00:00.000000000","2021-01-01T00:00:00.000000000","2021-02-01T00:00:00.000000000","2021-03-01T00:00:00.000000000","2021-04-01T00:00:00.000000000","2021-05-01T00:00:00.000000000","2021-06-01T00:00:00.000000000","2021-07-01T00:00:00.000000000","2021-08-01T00:00:00.000000000","2021-09-01T00:00:00.000000000","2021-10-01T00:00:00.000000000","2021-11-01T00:00:00.000000000","2021-12-01T00:00:00.000000000","2022-01-01T00:00:00.000000000","2022-02-01T00:00:00.000000000","2022-03-01T00:00:00.000000000","2022-04-01T00:00:00.000000000","2022-05-01T00:00:00.000000000","2022-06-01T00:00:00.000000000","2022-07-01T00:00:00.000000000","2022-08-01T00:00:00.000000000","2022-09-01T00:00:00.000000000","2022-10-01T00:00:00.000000000","2022-11-01T00:00:00.000000000","2022-12-01T00:00:00.000000000","2023-01-01T00:00:00.000000000","2023-02-01T00:00:00.000000000","2023-03-01T00:00:00.000000000","2023-04-01T00:00:00.000000000","2023-05-01T00:00:00.000000000","2023-06-01T00:00:00.000000000","2023-07-01T00:00:00.000000000","2023-08-01T00:00:00.000000000","2023-09-01T00:00:00.000000000","2023-10-01T00:00:00.000000000","2023-11-01T00:00:00.000000000","2023-12-01T00:00:00.000000000","2024-01-01T00:00:00.000000000","2024-02-01T00:00:00.000000000","2024-03-01T00:00:00.000000000","2024-04-01T00:00:00.000000000","2024-05-01T00:00:00.000000000","2024-06-01T00:00:00.000000000","2024-07-01T00:00:00.000000000","2024-08-01T00:00:00.000000000","2024-09-01T00:00:00.000000000","2024-10-01T00:00:00.000000000","2024-11-01T00:00:00.000000000","2024-12-01T00:00:00.000000000","2025-01-01T00:00:00.000000000","2025-02-01T00:00:00.000000000","2025-03-01T00:00:00.000000000","2025-04-01T00:00:00.000000000","2025-05-01T00:00:00.000000000","2025-06-01T00:00:00.000000000","2025-07-01T00:00:00.000000000","2025-08-01T00:00:00.000000000","2025-09-01T00:00:00.000000000","2025-10-01T00:00:00.000000000","2025-11-01T00:00:00.000000000","2025-12-01T00:00:00.000000000","2026-01-01T00:00:00.000000000","2026-02-01T00:00:00.000000000","2026-03-01T00:00:00.000000000","2026-04-01T00:00:00.000000000","2026-05-01T00:00:00.000000000"],"y":{"dtype":"f8","bdata":"hGh4f7vpWED\u002fJPBPAo9YQIAjlNHbWlNAYvompm+iUEAHOm2g005QQJVSSiml1FBAlQlFmVCEUUBANV66STxSQPOXLH\u002fJclNAVg4tsp3nVEDOOeecc35WQFtrrbXWWldAslreGMGoWUCRVABJBRBcQCoVZx8+G15A67+t\u002fttqYECiRbbz\u002fTBhQFiReBWJN2JAh6FxGBrHY0A7JngwT7RlQHOqJKdKSmdAakrF2YdPaUDbWLWNVbtqQIufu\u002fi5A2tARjDR38mmbEByzxT3TJlsQJWKsw+fGWxAnk7e6eRVbEDqJjEIrDxrQJrininuQWlATbrUpEttZ0AJrBxaZL9lQHfxcxc\u002fF2RAcfbhM+xiYkAhzRXSXOlgQKXdV9p9lV9Aif5OVsuLXEA1DkPjMKRZQG\u002fLWh0TjFhA55xzzjlXWEA07AqQe71VQMM+Luzj4lRAKe6Z4p7ZU0CEMnpb1lJTQGobq7axylJAmSfq3whFUkDWf1v9tyVSQOu\u002frf7b+lFAf7u5KuvOUUA5VZJTJblRQMQgsHJomVFAOuecc85JUUDEILByaHlRQMlgjQzWiFFA\u002fbfVf1sdUUAD5F5zIVlRQHtds9c1K1FAE4PAyqHVUEAcPcHRE9xQQC7s48I+3lBAT1bLGyM4UEAIaomglihPQHTaQKcNxE9AtftKu69UT0A9CtejcFVQQJt0qUmXWlBAOJ9y8ymHUEB8zYWkKS1QQNkQiw2xOFBAD+aJ+jeKUEBli1a2aLVQQA5D4zA0\u002flBAv5PV8saIUUB4g3436NdRQB+F61G4FlJAjDHGGGNMUkA="},"type":"scatter"},{"hovertemplate":"%{y:.0f}\u003cextra\u003eData Analytics\u003c\u002fextra\u003e","line":{"color":"#b4462b","dash":"solid","width":3},"mode":"lines","name":"Data Analytics","x":["2020-02-01T00:00:00.000000000","2020-03-01T00:00:00.000000000","2020-04-01T00:00:00.000000000","2020-05-01T00:00:00.000000000","2020-06-01T00:00:00.000000000","2020-07-01T00:00:00.000000000","2020-08-01T00:00:00.000000000","2020-09-01T00:00:00.000000000","2020-10-01T00:00:00.000000000","2020-11-01T00:00:00.000000000","2020-12-01T00:00:00.000000000","2021-01-01T00:00:00.000000000","2021-02-01T00:00:00.000000000","2021-03-01T00:00:00.000000000","2021-04-01T00:00:00.000000000","2021-05-01T00:00:00.000000000","2021-06-01T00:00:00.000000000","2021-07-01T00:00:00.000000000","2021-08-01T00:00:00.000000000","2021-09-01T00:00:00.000000000","2021-10-01T00:00:00.000000000","2021-11-01T00:00:00.000000000","2021-12-01T00:00:00.000000000","2022-01-01T00:00:00.000000000","2022-02-01T00:00:00.000000000","2022-03-01T00:00:00.000000000","2022-04-01T00:00:00.000000000","2022-05-01T00:00:00.000000000","2022-06-01T00:00:00.000000000","2022-07-01T00:00:00.000000000","2022-08-01T00:00:00.000000000","2022-09-01T00:00:00.000000000","2022-10-01T00:00:00.000000000","2022-11-01T00:00:00.000000000","2022-12-01T00:00:00.000000000","2023-01-01T00:00:00.000000000","2023-02-01T00:00:00.000000000","2023-03-01T00:00:00.000000000","2023-04-01T00:00:00.000000000","2023-05-01T00:00:00.000000000","2023-06-01T00:00:00.000000000","2023-07-01T00:00:00.000000000","2023-08-01T00:00:00.000000000","2023-09-01T00:00:00.000000000","2023-10-01T00:00:00.000000000","2023-11-01T00:00:00.000000000","2023-12-01T00:00:00.000000000","2024-01-01T00:00:00.000000000","2024-02-01T00:00:00.000000000","2024-03-01T00:00:00.000000000","2024-04-01T00:00:00.000000000","2024-05-01T00:00:00.000000000","2024-06-01T00:00:00.000000000","2024-07-01T00:00:00.000000000","2024-08-01T00:00:00.000000000","2024-09-01T00:00:00.000000000","2024-10-01T00:00:00.000000000","2024-11-01T00:00:00.000000000","2024-12-01T00:00:00.000000000","2025-01-01T00:00:00.000000000","2025-02-01T00:00:00.000000000","2025-03-01T00:00:00.000000000","2025-04-01T00:00:00.000000000","2025-05-01T00:00:00.000000000","2025-06-01T00:00:00.000000000","2025-07-01T00:00:00.000000000","2025-08-01T00:00:00.000000000","2025-09-01T00:00:00.000000000","2025-10-01T00:00:00.000000000","2025-11-01T00:00:00.000000000","2025-12-01T00:00:00.000000000","2026-01-01T00:00:00.000000000","2026-02-01T00:00:00.000000000","2026-03-01T00:00:00.000000000","2026-04-01T00:00:00.000000000","2026-05-01T00:00:00.000000000"],"y":{"dtype":"f8","bdata":"WfQc9qv1WEC7r7T7ShtYQMZLN4lBaFFAPXjMg8fcTECeqH8jlHFMQFEC\u002fyTwL05Ad6huh+rWTkAhsHJokVVQQNHvBv1ugFFAMJb8Ysk3U0Dj5y5+7rJUQLYfYPsBVlVAa3ljBBNJV0CIM3w4w4dZQFqrY4IHg1tA\u002fNzFz118XUCkKRVnH\u002f5eQOwsyM6ChGBAFBw9wdGTYUBsLiRNqRhjQCTMOsKsE2RAV4Dcay7QZUDWf1v9t4VnQFu0skUre2dAcT0K16N2aEChcRgahwlpQHE9Ctej5GhAxfRNTN+8aECwcmiR7cBnQI958JgHv2ZAOOh3g34\u002fZUDK6G1Zq\u002ftjQGmukOYKyWJAUyrOPny2YUDumeKeKY5gQOWdTt7pRF9AgzqogzpMXUCxRgZrZKBaQB1aZDvf\u002f1hA1e1Q3Q6FV0CwcmiR7cxVQM1e1+x17VRARAdGdGAkVEDJdr6fGr9TQCCpAJIKEFNAXrpJDAKDUkAMH87w4XxSQGGNDNbIgFJAT6BSvtH2UUCgBP5J4J9RQPkMuwLkhlFAqbeMesuYUUDZFSD3mptRQKJMKMqEclFA4A363aAPUUBvEoPAyllRQDjod4N+V1FAnu+nxksfUUBpQJsGtPlQQOecc845x1BAQWwqDTlvUEClS0261MRPQAuQe82FxE9A\u002fgDbD7B9TkDkF0t+sURPQN0O1e1QvU5Apd1X2n2lTkDOhaQpFZdNQEhzhTRXiE1A5BdLfrH0TUCyIRYbYpFNQK211lprrU1A16NwPQrHTkBSbxn1lhFPQNKUirMPT09ApZRSSiklT0A="},"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"annotations":[{"font":{"color":"#333","size":12},"showarrow":false,"text":"\u003cb\u003eAll openings\u003c\u002fb\u003e","x":"2026-05-01T00:00:00","xanchor":"left","xshift":8,"y":101.94451612903227},{"font":{"color":"#333","size":12},"showarrow":false,"text":"\u003cb\u003eSoftware\u003c\u002fb\u003e","x":"2026-05-01T00:00:00","xanchor":"left","xshift":8,"y":73.19354838709677},{"font":{"color":"#b4462b","size":12},"showarrow":false,"text":"\u003cb\u003eData Analytics\u003c\u002fb\u003e","x":"2026-05-01T00:00:00","xanchor":"left","xshift":8,"y":62.29032258064516},{"font":{"color":"#777","size":11},"showarrow":false,"text":"Feb 2020 level","x":"2020-02-01T00:00:00","xanchor":"left","y":100,"yshift":10},{"align":"left","font":{"color":"#555","size":11},"showarrow":false,"text":"ChatGPT released\u003cbr\u003eNov 2022","x":"2022-11-30","xanchor":"left","xshift":6,"y":1,"yanchor":"top","yref":"paper"}],"shapes":[{"line":{"color":"#bbb","width":1},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":100,"y1":100,"yref":"y"},{"line":{"color":"#777","dash":"dash","width":1},"type":"line","x0":1669766400000.0,"x1":1669766400000.0,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"font":{"family":"Libre Franklin, system-ui, sans-serif","size":12,"color":"#333"},"margin":{"l":10,"r":110,"t":30,"b":10},"legend":{"orientation":"h","yanchor":"bottom","y":1.02,"x":0,"title":{}},"yaxis":{"title":{"text":"Index (Feb 2020 = 100)"},"showgrid":true,"gridcolor":"#eee","zeroline":false,"rangemode":"tozero"},"xaxis":{"showgrid":false,"hoverformat":"%b %Y","dtick":"M12","tickformat":"%Y","range":["2020-01-12T00:00:00","2026-05-21T00:00:00"]},"height":440,"hovermode":"x unified"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('0621a5be-a3d9-415f-90a8-b002440f24ca');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-indexed-openings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Indeed job postings indexed to February 2020 (= 100), monthly averages of daily values through May 2026. Data &amp; Analytics postings doubled during the 2021 to 2022 hiring boom, then fell to about 62, well below their pre-pandemic level, while postings across the whole labor market settled back near 100. The decline began in spring 2022, months before ChatGPT was released. Source: Indeed Hiring Lab (CC BY 4.0).
+</figcaption>
 </figure>
 </div>
-<section id="project-scope" class="level2">
-<h2 class="anchored" data-anchor-id="project-scope">Project Scope</h2>
-<p>Does AI-related sentiment carry predictive information about U.S. data-job demand beyond what hard labor data already contains?</p>
-<p>“Sentiment”: the tone of how AI and jobs are discussed, scored from news coverage and Federal Reserve Beige Book reports.</p>
-<p>“Data-job demand”: monthly openings and employment for data-related occupations such as data scientists, analysts and statisticians.</p>
-<p>The test: a forecast built only from labor history is compared against one that also includes lagged sentiment, and the winner is decided by out-of-sample error. I will look at monthly frequency from 2021 to the present which brackets the late-2022 arrival of generative AI into public conversation and provides prior sentiment for comparison. The aim is to measure whether the story about AI can be a predictor of the labor market, not to prove that AI causes the changes.</p>
+</div>
+<p><a href="#fig-indexed-openings" class="quarto-xref">Figure&nbsp;1</a> is the starting point for this project. Data Analytics and Software postings rose and fell far more sharply than the market as a whole, and both now sit well below where they were before the pandemic. The timing matters though. The drop started in early 2022, when the Federal Reserve began raising interest rates, not after ChatGPT arrived. So the chart cannot tell us on its own how much of the decline is about AI and how much is about the economy. Separating those two stories is the core of this project.</p>
+<p>The postings that remain are also asking for something different. The share of all U.S. job postings that mention AI fell to about 1.7 percent in mid-2023, then more than tripled to about 5.6 percent by May 2026, while Data Analytics postings kept drifting lower (<a href="#fig-ai-share" class="quarto-xref">Figure&nbsp;2</a>). Fewer postings, with more of them asking for AI, is what makes me think these jobs are changing shape and not just shrinking.</p>
+<div id="cell-fig-ai-share" class="cell" data-execution_count="2">
+<div id="fig-ai-share" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ai-share-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="height:300px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="cdba28ca-23cf-45b5-be49-836c6b74e0b8" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("cdba28ca-23cf-45b5-be49-836c6b74e0b8")) {                    Plotly.newPlot(                        "cdba28ca-23cf-45b5-be49-836c6b74e0b8",                        [{"fill":"tozeroy","fillcolor":"rgba(63,74,84,0.08)","hovertemplate":"%{y:.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#3f4a54","width":2},"mode":"lines","name":"AI-mention share","x":["2020-02-01T00:00:00.000000000","2020-03-01T00:00:00.000000000","2020-04-01T00:00:00.000000000","2020-05-01T00:00:00.000000000","2020-06-01T00:00:00.000000000","2020-07-01T00:00:00.000000000","2020-08-01T00:00:00.000000000","2020-09-01T00:00:00.000000000","2020-10-01T00:00:00.000000000","2020-11-01T00:00:00.000000000","2020-12-01T00:00:00.000000000","2021-01-01T00:00:00.000000000","2021-02-01T00:00:00.000000000","2021-03-01T00:00:00.000000000","2021-04-01T00:00:00.000000000","2021-05-01T00:00:00.000000000","2021-06-01T00:00:00.000000000","2021-07-01T00:00:00.000000000","2021-08-01T00:00:00.000000000","2021-09-01T00:00:00.000000000","2021-10-01T00:00:00.000000000","2021-11-01T00:00:00.000000000","2021-12-01T00:00:00.000000000","2022-01-01T00:00:00.000000000","2022-02-01T00:00:00.000000000","2022-03-01T00:00:00.000000000","2022-04-01T00:00:00.000000000","2022-05-01T00:00:00.000000000","2022-06-01T00:00:00.000000000","2022-07-01T00:00:00.000000000","2022-08-01T00:00:00.000000000","2022-09-01T00:00:00.000000000","2022-10-01T00:00:00.000000000","2022-11-01T00:00:00.000000000","2022-12-01T00:00:00.000000000","2023-01-01T00:00:00.000000000","2023-02-01T00:00:00.000000000","2023-03-01T00:00:00.000000000","2023-04-01T00:00:00.000000000","2023-05-01T00:00:00.000000000","2023-06-01T00:00:00.000000000","2023-07-01T00:00:00.000000000","2023-08-01T00:00:00.000000000","2023-09-01T00:00:00.000000000","2023-10-01T00:00:00.000000000","2023-11-01T00:00:00.000000000","2023-12-01T00:00:00.000000000","2024-01-01T00:00:00.000000000","2024-02-01T00:00:00.000000000","2024-03-01T00:00:00.000000000","2024-04-01T00:00:00.000000000","2024-05-01T00:00:00.000000000","2024-06-01T00:00:00.000000000","2024-07-01T00:00:00.000000000","2024-08-01T00:00:00.000000000","2024-09-01T00:00:00.000000000","2024-10-01T00:00:00.000000000","2024-11-01T00:00:00.000000000","2024-12-01T00:00:00.000000000","2025-01-01T00:00:00.000000000","2025-02-01T00:00:00.000000000","2025-03-01T00:00:00.000000000","2025-04-01T00:00:00.000000000","2025-05-01T00:00:00.000000000","2025-06-01T00:00:00.000000000","2025-07-01T00:00:00.000000000","2025-08-01T00:00:00.000000000","2025-09-01T00:00:00.000000000","2025-10-01T00:00:00.000000000","2025-11-01T00:00:00.000000000","2025-12-01T00:00:00.000000000","2026-01-01T00:00:00.000000000","2026-02-01T00:00:00.000000000","2026-03-01T00:00:00.000000000","2026-04-01T00:00:00.000000000","2026-05-01T00:00:00.000000000"],"y":{"dtype":"f8","bdata":"aXh\u002fu7kq\u002fz\u002fR7wb9btD\u002fP+e0gU4b6P4\u002f2uuava7Z+z\u002fJdr6fGi\u002f5P8OHM3w4w\u002fc\u002f4+cufu7i9z9yr7mQNKX4P\u002fHhDB\u002fO8Pk\u002f+sWSXyz5+z+bBrRpQJv+P6rbobodqv8\u002ftAuITaUhAUC41X9b\u002fbcBQARWDi2ynQBAvkDkC0S+AEArzj58hl0BQNt9pd1X2gFAHxf2cWEfA0Ct1THBg3kEQIrpm5i+iQVAWTm0yHa+BkAAAAAAAAAIQJlQlAlFmQhA0pBzn13ACUDbD7D9ANsJQFCNl24SgwlAhMc8eMyDCUAxCKwcWmQIQDnDhzN8OAdA5Z1O3unkBUDhehSuR+EEQI8L+7iwjwNAKVyPwvUoAkCMMcYYY4wBQDt5p5N3OgFA0pBzn13AAEDOguwsyM7+P1qrY4IH8\u002fw\u002f+CeBfxL4+z9OG+i0gU77P3U7VLdDdfs\u002fyTudvNPJ+z+pfyOU0dv8P3NhHxf2cf0\u002fkTSl4uzD\u002fT9sGtCmAW3+P1FLBLVEUP8\u002faoTlnkZYAEBtGtCmAW0AQG\u002fLWh0TPABAXWrSpSZdAED1b4QyelsBQJjjeTmelwFA5S9Z\u002fpLlAUDHBA\u002fmifoCQJxPufmUmwNASVMqzj58BEA4MX0T0zcFQLxBvxv0uwVAXkBsKg05BkD5uYufu\u002fgFQFPjpZvEIAZAOjCiAyM6BkATPJgn6t8HQBljjDHGGAlAmb6J6ZuYCkBBpw102kAMQMYYY4wxxg5AV4Dcay6kEEBisSEWG2IRQBsZrJHBGhJAKKvljRGME0CttdZaa60UQJtScfbhsxVAfu7i5y5+FkA="},"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"annotations":[{"font":{"color":"#333","size":12},"showarrow":false,"text":"\u003cb\u003e5.6%\u003c\u002fb\u003e","x":"2026-05-01T00:00:00","xanchor":"left","xshift":8,"y":5.623225806451613},{"font":{"color":"#555","size":11},"showarrow":false,"text":"ChatGPT released","x":"2022-11-30","xanchor":"left","xshift":6,"y":1,"yanchor":"top","yref":"paper"}],"shapes":[{"line":{"color":"#777","dash":"dash","width":1},"type":"line","x0":1669766400000.0,"x1":1669766400000.0,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"font":{"family":"Libre Franklin, system-ui, sans-serif","size":12,"color":"#333"},"margin":{"l":10,"r":110,"t":20,"b":10},"yaxis":{"title":{"text":"% of postings mentioning AI"},"ticksuffix":"%","showgrid":true,"gridcolor":"#eee","rangemode":"tozero"},"xaxis":{"showgrid":false,"hoverformat":"%b %Y","dtick":"M12","tickformat":"%Y","range":["2020-01-12T00:00:00","2026-05-21T00:00:00"]},"height":300,"showlegend":false,"hovermode":"x unified"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('cdba28ca-23cf-45b5-be49-836c6b74e0b8');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ai-share-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Share of all U.S. Indeed job postings that mention AI or generative AI terms, monthly averages of daily values, February 2020 through May 2026. After the 2022 hiring boom faded, AI mentions climbed steadily even as Data Analytics postings kept falling. Source: Indeed Hiring Lab AI tracker (CC BY 4.0).
+</figcaption>
+</figure>
+</div>
+</div>
 </section>
-<section id="introduction-motivation" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-motivation">Introduction &amp; Motivation</h2>
-<p>The public conversation about AI replacing data workers is running well ahead of the evidence: headlines describe data jobs being automated away, while hard labor data shows only a recent and contested decline concentrated among early-career workers since late 2022 (Cite Literature). My project tests if that talk holds valuable information, asking whether AI-related sentiment can predict U.S. data-job demand beyond what the labor history already provides.</p>
-<p>The question matters because narratives have consequences. A story that runs ahead of reality can steer students out of a viable field and freeze entry-level hiring before the data actually justifies it. On the other hand, a story that lags means workers, educator and policymakers underreact to a genuine shift.</p>
-<p>Answering the question allows for those various groups to act on a measured signal rather than just speculation. If AI signals reliably lead changes in data-job demand, they serve as an early warning for a workforce in transition. If they do not, that itself shows theat the labor data already captures what the discourse claims to add.</p>
-<hr>
+<section id="why-i-care" class="level2" data-kicker="My stake">
+<h2 data-kicker="My stake" class="anchored" data-anchor-id="why-i-care">Why I care</h2>
+<p>I am a statistics major planning to pursue a master’s in data science, which means the jobs in that red line are the jobs I am preparing for. When I look at postings for data analyst or data scientist roles, I see terms like machine learning, Python and generative AI sitting next to the statistical skills I have spent years building.</p>
+<div class="pull-quote">
+<p>Is the market for these roles growing, shrinking or just changing shape?</p>
+</div>
+<p>This portfolio is my attempt to answer that with data instead of headlines, and to figure out what employers will actually expect from me when I graduate.</p>
 </section>
-<section id="official-research-questions" class="level2">
-<h2 class="anchored" data-anchor-id="official-research-questions">Official Research Questions</h2>
+<section id="what-we-are-investigating" class="level2" data-kicker="The project">
+<h2 data-kicker="The project" class="anchored" data-anchor-id="what-we-are-investigating">What we are investigating</h2>
+<p>So the question is whether the things we can measure about AI, the economy and the markets actually show up in who is hiring. The project follows three job-opening series: Data Analytics openings, Software openings and overall job openings. Comparing them lets us ask whether data and software roles behave differently from the labor market as a whole, which <a href="#fig-indexed-openings" class="quarto-xref">Figure&nbsp;1</a> suggests they do. We pair these series with outside signals that could explain or anticipate those movements:</p>
 <ul>
-<li><p><strong>Primary Research Question:</strong> <em>Does AI sentiment carry predictive information about data-job demand beyond what the labor data alone provides?</em></p></li>
-<li><p><strong>Secondary Research Question:</strong> <em>Did the public release of ChatGPT mark a break in U.S. data-job demand, AI-jobs sentiment, or in both?</em></p></li>
-</ul>
-<hr>
-</section>
-<section id="initial-literature-review" class="level2">
-<h2 class="anchored" data-anchor-id="initial-literature-review">Initial Literature Review</h2>
-<section id="prior-work-1-canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence" class="level3">
-<h3 class="anchored" data-anchor-id="prior-work-1-canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence">Prior Work 1: Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence</h3>
-<ul>
-<li><strong>Source/Authors: Erik Brynjolfsson, Bharat Chandar and Ruyu Chen</strong></li>
-<li><strong>Core Finding: Using high-frequency payroll data, the authors found that early-career workers aged 22 to 25 in the most AI-exposed occupations saw a 16% relative decline in employment (up 3% from the previous year), while older workers held steady. The authors found that the employment decline was concentrated in roles where Artificial Intelligence automates rather than augments their work. Around the time of the public release of ChatGPT was where these employment patterns appeared to start.</strong></li>
-<li><strong>How it informs the project: This work contextualizes and grounds the labor-outcome side of my question. It also serves the central tension of my research: that the displacement signal is real. I plan to test whether the surrounding AI signals lead or coincide with the observed employment decline</strong></li>
+<li><strong>Public interest in AI</strong>, such as search activity and the share of job postings that mention AI</li>
+<li><strong>Financial markets</strong>, especially tech-sector stock performance</li>
+<li><strong>Economic conditions</strong>, including interest rates, inflation and other indicators</li>
 </ul>
 </section>
-<section id="prior-work-2-how-ai-forecasts-ai-jobs-benchmarking-llm-predictions-of-labor-market-changes" class="level3">
-<h3 class="anchored" data-anchor-id="prior-work-2-how-ai-forecasts-ai-jobs-benchmarking-llm-predictions-of-labor-market-changes">Prior Work 2: How AI Forecasts AI Jobs: Benchmarking LLM Predictions of Labor Market Changes</h3>
-<ul>
-<li><strong>Source/Authors: Sheri Osborn, Rohit Valecha, H. Raghav Rao, Daniel A. Sass, and Anthony Rios, University of Texas at San Antonio (2025)</strong></li>
-<li><strong>Core Finding: The authors of this paper built a benchmark for forecasting sector-level job demand from text and structured data. They used the same Indeed Hiring Lab postings index that I analyzed under strict controls. In their findings, they discovered that a simple moving-average baseline was hard to beat.</strong></li>
-<li><strong>How it informs the project: This paper is the closest existing work to my project goal and shaped my methodology directly. I plan to use time-ordered out-of-sample evaluation and to benchmark similarly to a naive baseline. What makes our projects different is that I plan on keeping my forecasting model classical and testing AI sentiment as an exogenous predictor rather than prompting an language model to forecast like they did.</strong></li>
-</ul>
-<hr>
+<section id="research-questions" class="level2" data-kicker="Questions">
+<h2 data-kicker="Questions" class="anchored" data-anchor-id="research-questions">Research questions</h2>
+<ol type="1">
+<li>How do Data Analytics and Software job openings differ from overall U.S. job openings in their response to macroeconomic indicators, tech stock prices and public interest signals?</li>
+<li>Can traditional time-series and deep learning models use public interest, macroeconomic and tech stock signals to improve forecasts of AI- and data-related job-opening trends?</li>
+<li>Can NLP-derived measures from job records and descriptions reveal how AI adoption is reshaping cross-sectoral hiring and occupational skill demand over time?</li>
+</ol>
 </section>
-</section>
-<section id="data-source-orientation" class="level2">
-<h2 class="anchored" data-anchor-id="data-source-orientation">Data Source Orientation</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 18%">
-<col style="width: 30%">
-<col style="width: 30%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Data Asset Name</th>
-<th>Source Agency</th>
-<th>Format (.csv, API, SQL)</th>
-<th>Row/Column Count (Est.)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>JOLTS Total Nonfarm Job Openings</td>
-<td>BLS JOLTS via FRED</td>
-<td>.csv (also API)</td>
-<td>~61 x 2</td>
-</tr>
-<tr class="even">
-<td>JOLTS Professional &amp; Business Services Openings</td>
-<td>BLS JOLTS via FRED</td>
-<td>.csv (also API)</td>
-<td>~61 x 2</td>
-</tr>
-<tr class="odd">
-<td>Indeed Sector Job-Postings Index (Data &amp; Analytics + tech)</td>
-<td>Indeed Hiring Lab</td>
-<td>.csv</td>
-<td>~9,300 x 8</td>
-</tr>
-<tr class="even">
-<td>Indeed National AI-Mention Tracker (share of postings)</td>
-<td>Indeed Hiring Lab</td>
-<td>.csv</td>
-<td>~2,700 x 6</td>
-</tr>
-</tbody>
-</table>
+<section id="our-approach" class="level2" data-kicker="Methods">
+<h2 data-kicker="Methods" class="anchored" data-anchor-id="our-approach">Our approach</h2>
+<p>We start by exploring how job openings move alongside the outside indicators, using visualization and regression. We then forecast job-opening trends with traditional time-series models (ARIMA, ARIMAX and SARIMAX) and with deep learning models (RNN, LSTM and GRU), and compare how well each performs on the same data. Finally, we use NLP on job records to measure how hiring shifts across occupations with different levels of AI exposure, and extending that work to full job descriptions is the next step. That last piece brings the project back to the question I started with, since it looks directly at the skills employers are asking for.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Where this ends up
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Traditional time-series models forecast these trends more reliably than the deep learning models, and the outside signals mattered more for Data Analytics and Software openings than for openings overall. The pages that follow show how we got there, starting with a closer look at the data in <a href="./visualization.html">Data Visualization</a>.</p>
+</div>
+</div>
 
 
 </section>
@@ -419,19 +326,6 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -503,7 +397,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/augustmok1\.github\.io\/DSAN-AI-Project\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
